@@ -2,6 +2,7 @@
 /build/
 /out/
 /CMakeUserPresets.json
+/.dev701.local.json
 /binForPublic/
 /x64/
 /generated/

@@ -22,6 +22,9 @@ legacy Visual Studio and qmake build files unchanged. The frozen dependency
 contract and known binary limitations are in
 [`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md).
 
+For the new path, run `scripts\setup.ps1` once, then use the zero-argument
+`scripts\build.ps1` and `scripts\run.ps1` commands.
+
 ## Quick start
 
 From PowerShell in a fresh clone:

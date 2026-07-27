@@ -14,12 +14,50 @@ The first milestone supports only:
 - Qt 5.14.1 `msvc2017_64`
 - VTK 8.2.0 built against the same Qt installation
 
-## Configure and build
+## Recommended workflow
 
-From PowerShell at the repository root:
+Run setup once from PowerShell at the repository root:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\setup.ps1
+```
+
+The script checks saved configuration, `QTDIR`/`QT_ROOT`, `VTK_ROOT`/`VTK_DIR`,
+`PATH`, and conventional drive locations. If Qt or VTK cannot be found, it
+asks for that path once. The result is stored in `.dev701.local.json`, which is
+ignored by Git.
+
+Setup also locates or asks once for verified x64 Debug copies of `qwtd.dll`,
+`qwtplot3d.dll`, `QGLViewerd2.dll`, and `QSshd.dll`. Known 32-bit binaries are
+rejected. The saved directories are reused by build and run.
+
+Paths can also be supplied non-interactively on the first run:
+
+```powershell
+.\scripts\setup.ps1 `
+  -QtRoot D:\Qt\5.14.1\msvc2017_64 `
+  -VtkRoot D:\deps\VTK-8.2 `
+  -AdditionalRuntimePath D:\deps\dev701-x64-debug\bin
+```
+
+After setup, daily commands have no path arguments:
+
+```powershell
+.\scripts\build.ps1
+.\scripts\run.ps1
+```
+
+`build.ps1` configures, builds, and deploys Qt plugins, VTK DLLs, verified
+additional dependency DLLs, and source-controlled runtime data into
+`out\runtime\Debug`. `run.ps1` starts that isolated runtime.
+It does not add Qt or VTK installation directories to `PATH`.
+
+## Low-level commands
+
+The parameterized scripts remain available for diagnostics and automation:
+
+```powershell
 
 .\scripts\Check-Environment.ps1 `
   -QtRoot D:\Qt\5.14.1\msvc2017_64 `
@@ -45,7 +83,7 @@ The legacy `Resource2.qrc` references images below the excluded
 the same files from the source-controlled `images/` directory while preserving
 their original Qt resource aliases. The legacy qrc is left unchanged.
 
-## Run
+## Low-level run
 
 Qt and VTK are supplied through a process-local `PATH`:
 
