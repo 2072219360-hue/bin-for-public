@@ -31,7 +31,7 @@ function Test-Dev701PeX64([string]$Path) {
 }
 
 function Get-Dev701MissingRuntimeDlls([string[]]$Directories) {
-    $required = @("qwtd.dll", "qwtplot3d.dll", "QGLViewerd2.dll", "QSshd.dll")
+    $required = @("qwtd.dll", "qwtplot3d.dll", "QGLViewerd2.dll", "QSshd.dll", "jsoncpp.dll")
     return @($required | Where-Object {
         $name = $_
         -not ($Directories | Where-Object {

@@ -29,8 +29,8 @@ asks for that path once. The result is stored in `.dev701.local.json`, which is
 ignored by Git.
 
 Setup also locates or asks once for verified x64 Debug copies of `qwtd.dll`,
-`qwtplot3d.dll`, `QGLViewerd2.dll`, and `QSshd.dll`. Known 32-bit binaries are
-rejected. The saved directories are reused by build and run.
+`qwtplot3d.dll`, `QGLViewerd2.dll`, `QSshd.dll`, and `jsoncpp.dll`. Known 32-bit
+binaries are rejected. The saved directories are reused by build and run.
 
 Paths can also be supplied non-interactively on the first run:
 
@@ -52,6 +52,12 @@ After setup, daily commands have no path arguments:
 additional dependency DLLs, and source-controlled runtime data into
 `out\runtime\Debug`. `run.ps1` starts that isolated runtime.
 It does not add Qt or VTK installation directories to `PATH`.
+
+When an additional runtime directory contains legacy runtime-data folders
+(`help`, `newtemplate`, `mpisupport`, `pyengine`, `pltDemo`, or `ui`), they are
+copied as well. Missing optional folders do not prevent the main window from
+starting, but the corresponding workspace, MPI, cluster, or help feature may
+remain unavailable. Empty `logs` and `workSpace` directories are always made.
 
 ## Low-level commands
 

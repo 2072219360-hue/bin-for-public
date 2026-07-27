@@ -62,7 +62,7 @@ function Find-RuntimePaths {
     foreach ($candidate in $candidates | Where-Object { $_ } | Select-Object -Unique) {
         if (Test-Path $candidate -PathType Container) {
             $candidate = (Resolve-Path $candidate).Path
-            $hasRequiredDll = @("qwtd.dll", "qwtplot3d.dll", "QGLViewerd2.dll", "QSshd.dll") |
+            $hasRequiredDll = @("qwtd.dll", "qwtplot3d.dll", "QGLViewerd2.dll", "QSshd.dll", "jsoncpp.dll") |
                 Where-Object { Test-Dev701PeX64 (Join-Path $candidate $_) } |
                 Select-Object -First 1
             if ($hasRequiredDll) { $valid += $candidate }

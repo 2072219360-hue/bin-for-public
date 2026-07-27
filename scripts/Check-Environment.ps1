@@ -27,7 +27,7 @@ function Find-VsWhere {
 
 function Find-Dumpbin([string]$VsWhere) {
     if (-not $VsWhere) { return $null }
-    $vsRoot = & $VsWhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
+    $vsRoot = & $VsWhere -version "[15.0,16.0)" -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
     if (-not $vsRoot) { return $null }
     $tools = Get-ChildItem (Join-Path $vsRoot "VC\Tools\MSVC") -Directory -ErrorAction SilentlyContinue |
         Sort-Object Name -Descending | Select-Object -First 1
@@ -61,9 +61,9 @@ Write-Check ($null -ne $vswhere) "Visual Studio locator" $(if ($vswhere) { $vswh
 
 $vsRoot = $null
 if ($vswhere) {
-    $vsRoot = & $vswhere -latest -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
+    $vsRoot = & $vswhere -version "[15.0,16.0)" -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
 }
-Write-Check (-not [string]::IsNullOrWhiteSpace($vsRoot)) "MSVC v141 x64" $(if ($vsRoot) { $vsRoot } else { "v141 toolset not installed" })
+Write-Check (-not [string]::IsNullOrWhiteSpace($vsRoot)) "Visual Studio 2017 + MSVC v141 x64" $(if ($vsRoot) { $vsRoot } else { "VS2017 with the v141 x64 toolset not installed" })
 
 $cmake = Get-Command cmake -ErrorAction SilentlyContinue
 Write-Check ($null -ne $cmake) "CMake" $(if ($cmake) { (& cmake --version | Select-Object -First 1) } else { "cmake not on PATH" })
