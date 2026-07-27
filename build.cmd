@@ -1,0 +1,1 @@
+@echo off`r`npowershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\build.ps1" %*`r`nexit /b 0
