@@ -1,0 +1,29 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "vs2017-x64-debug",
+      "displayName": "VS2017 x64 Debug (legacy baseline)",
+      "description": "Conservative parallel build; does not modify the legacy VS/qmake projects.",
+      "generator": "Visual Studio 15 2017",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/out/build/vs2017-x64-debug",
+      "cacheVariables": {
+        "CMAKE_CONFIGURATION_TYPES": "Debug"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "vs2017-x64-debug",
+      "configurePreset": "vs2017-x64-debug",
+      "configuration": "Debug",
+      "jobs": 1
+    }
+  ]
+}
