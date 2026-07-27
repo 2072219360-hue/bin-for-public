@@ -1,0 +1,1452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\log4qt\appenderskeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\basicconfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\classlogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\configuratorhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\consoleappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\dailyrollingfileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\datetime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\debugappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\denyallfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\fileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\spi\filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\hierarchy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\huangglobalconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\huangmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\initialisationhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\layout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\levelmatchfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\levelrangefilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\listappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\log4qt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\logerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\loggerrepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\loggingevent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\logmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\logobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\logobjectptr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\mdc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\ndc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\nullappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\optionconverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\patternformatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\patternlayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\helpers\properties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\propertyconfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\rollingfileappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\simplelayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\varia\stringmatchfilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\ttcclayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\writerappender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CConnectionForSshClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CusButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrTableShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSPNS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkSpaceOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutPutLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SignalInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkSpaceOpDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorChooseDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SectInfoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myColorTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Operator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BatchConfigWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingletonBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="postgridsimplify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECHV.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECHVSignalInstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="runData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="argData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ECHVStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArgWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="echvVTKWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="transGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateFullDataset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateTrees.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unionFindCT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="relevance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myDBSCAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="computeLiutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\huangmainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btnObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mySubject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statusSubject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BatchSSPNS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="progressTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="publicArgWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btnWiget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="batchProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="processPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamSetDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="createBoundata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostProcessProfiling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileOpUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inp_process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ISA_Calc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workerHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workFlow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="readFileStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="updateStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pnsStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sectStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clearStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nsStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="workSpaceStarter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubZoneWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="checkProgramStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sync_trData_input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamEditDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PTGeneration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StyleWidgetFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="updateBatchArgs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileParamChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bodyPathChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputFileEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filePathComputer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="USStandardAtmosphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="computeLPCWSTR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\log4qt\basicconfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\classlogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\datetime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\hierarchy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\initialisationhelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\log4qt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\logerror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\loggerrepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\loggingevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\logmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\logobjectptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\mdc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\ndc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\optionconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\patternformatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\helpers\properties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log4qt\propertyconfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qtcommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorChooseDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myColorTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\huangglobalconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileOp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="runData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="argData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ECHVStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="transGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateFullDataset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateTrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unionFindCT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="relevance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myDBSCAN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="computeLiutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="btnObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="myObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mySubject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statusSubject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="batchCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="processPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="createBoundata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileOpUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inp_process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ISA_Calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="workerHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="workContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="workFlow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="workStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="readFileStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="updateStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pnsStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sectStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clearStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nsStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="workSpaceStarter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checkProgramStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sync_trData_input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PTGeneration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StyleWidgetFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="updateBatchArgs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileParamChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bodyPathChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputFileEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filePathComputer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="USStandardAtmosphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="computeLPCWSTR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lang\Dev701QtNSPlatformBase_zh.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="lang\Dev701QtNSPlatformBase_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="qss\coffee.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qss\default.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qss\pagefold.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="qt_zh_CN.qm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ui\third.ui">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="batchProcess.tpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\2Dpost.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\3Dpost.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Ability_BackStab.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Ability_Gouge.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\apple.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\apple1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\apple2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\application-exit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Arrow-Left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Arrow-Right.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Ball.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\banner.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\basedata.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\BG.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\bg.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\book.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\box.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\brown.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\bumps.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\ceiling.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_checked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_checked_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_checked_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_unchecked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_unchecked_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\checkbox_unchecked_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\closetab.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\clusterMPIEnv.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\clusterMPIrun.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\config.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Copy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\crate.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\cube.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Cut.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\default.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\default.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Document.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\door.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\down_arrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\down_arrow_disabled.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\edit-delete.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\EditInsp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Envroll.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Envwall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Exit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\filecell.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\fileopen.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\filledmesh.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Find.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\floor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\floordata.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\floorempty.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\flooriso.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\floormesh.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\Folder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\font.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Font.tga">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\frame.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\FreeBSD.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\glass.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\grid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridb.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridc.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridf.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridfr.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridInsp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridl.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridpre.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\gridr.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Hacker2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\hiddenline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon3-240.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon4-16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon4-24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon4-32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon5-16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon5-24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon5-32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\icon5-48.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Image.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Image1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Image2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Chest_Chain_14.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Gauntlets_03.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Jewelry_Amulet_04.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Jewelry_Ring_26.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Jewelry_Talisman_01.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Misc_Book_06.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Misc_Horn_02.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Scroll_02.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Shield_02.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Stone_05.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Sword_09.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Sword_25.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_ThrowingKnife_04.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\INV_Weapon_Crossbow_10.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Logo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\logo1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\logo2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\logo3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Mask1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Mask2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\movie.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\nehe.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\new.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\nodata.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\none.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\normals.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\option.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\pagefold.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Particle.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Paste.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\polygon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\print.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\pushbutton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\pushbutton_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\pushbutton_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\query.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\qwtplot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_checked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_checked_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_checked_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_unchecked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_unchecked_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\radiobutton_unchecked_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Redo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Reflect.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\resultBrowser.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\runBrowser.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\runParam.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\save.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Save.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\savecontent.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\SaveInsp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\scattered.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\showinsp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\singleMPIenv.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\singleMPIrun.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\sizegrip.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Spell_Fire_Incinerate.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spindown.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spindown_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spindown_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spindown_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spinup.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spinup_hover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spinup_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\spinup_pressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\splash.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\temp.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\tim.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Undo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\undo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\up_arrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\up_arrow_disabled.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\update.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\w2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\Wall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\war6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\watermark1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\watermark2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\wireframe.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\zoomin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\zoomout.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToNegativeX.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToNegativeY.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToNegativeZ.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToX.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToY.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\setViewDirectionToZ.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\toolbar1.bmp" />
+    <Image Include="images\表面模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\轮廓模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\散点模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\网格模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\网面模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\显示图例.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\隐藏图例.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="images\云图模式.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="images\in1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\log4qt\appenderskeleton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\helpers\configuratorhelper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\consoleappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\dailyrollingfileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\debugappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\denyallfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\fileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\spi\filter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\huangmainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\layout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\levelmatchfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\levelrangefilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\listappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\logger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\helpers\logobject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\nullappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\patternlayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\rollingfileappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\simplelayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\stringmatchfilter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\ttcclayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\writerappender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtUic Include="ui\findwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\first.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\fontdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\postprocessQWT3D\lightingdlgbase4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\linecolumnwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\mainwindowOfstylesheet.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\postprocessQWT3D\mesh2mainwindowbase4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\second.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ui\stylesheeteditor.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\testQGLViewer\viewerInterfacedialog.Qt4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\testQGLViewer\viewerInterfacewidget.Qt4.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtRcc Include="ccconfigdialog.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="classwizard.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="Dev701QtNSPlatformBaseMain.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="GLWidget.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mesh2.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="resources\resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="stylesheet.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="uiloader.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtMoc Include="src\scenewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\CConnectionForSshClient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\Widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="InputSet.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CusButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TrTableShow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SSPNS.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="InputHeader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WorkSpaceOp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="OutPutLogger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SignalInstance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WorkSpaceOpDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RWThread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SectInfoDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SwitchButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Operator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BatchConfigWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\log4qt\appender.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SingletonBase.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="postgridsimplify.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ECHV.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ECHVSignalInstance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dataServer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ArgWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GraphWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="echvVTKWin.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BatchSSPNS.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="progressTable.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="publicArgWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="btnWiget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="batchProcess.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="logWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PostProcessProfiling.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ParamSetDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="projectWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SubZoneWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ParamEditDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PostProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dev701QtNSPlatformBase.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resource2.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>

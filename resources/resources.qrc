@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/img" >
+        <file alias="closetab" >closetab.png</file>
+        <file>icon3-240.png</file>
+        <file>icon4-16.png</file>
+        <file>icon4-24.png</file>
+        <file>icon4-32.png</file>
+        <file>icon5-16.png</file>
+        <file>icon5-24.png</file>
+        <file>icon5-32.png</file>
+        <file>PNG/Folder.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Document.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Redo.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Save.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Undo.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Copy.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Cut.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Paste.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Find.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Arrow-Left.png</file>
+        <file>PNG/VistaICO_Toolbar_Icons/Arrow-Right.png</file>
+        <file>PNG/application-exit.png</file>
+        <file>PNG/edit-delete.png</file>
+        <file>icon5-48.png</file>
+    </qresource>
+</RCC>

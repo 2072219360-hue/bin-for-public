@@ -1,0 +1,39 @@
+.TH "E:/Dev701QtNSPlatformTechExp/qwtplot3d/src/qwt3d_types.cpp" 3 "Sat Sep 1 2012" "Qwtplot3d" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+E:/Dev701QtNSPlatformTechExp/qwtplot3d/src/qwt3d_types.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <float\&.h>\fP
+.br
+\fC#include 'qwt3d_types\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCMPM\fP(c, A, B)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CMPM(c, A, B)"
+\fBValue:\fP
+.PP
+.nf
+v = (*(coordinate_type**)A)[c] - (*(coordinate_type**)B)[c];\
+  if (v>0) return 1;\
+  if (v<0) return -1;
+.fi
+.PP
+Definition at line 28 of file qwt3d_types\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Qwtplot3d from the source code\&.

@@ -1,0 +1,34 @@
+\hypertarget{qwt3d__types_8cpp}{\section{E\-:/\-Dev701\-Qt\-N\-S\-Platform\-Tech\-Exp/qwtplot3d/src/qwt3d\-\_\-types.cpp File Reference}
+\label{qwt3d__types_8cpp}\index{E\-:/\-Dev701\-Qt\-N\-S\-Platform\-Tech\-Exp/qwtplot3d/src/qwt3d\-\_\-types.\-cpp@{E\-:/\-Dev701\-Qt\-N\-S\-Platform\-Tech\-Exp/qwtplot3d/src/qwt3d\-\_\-types.\-cpp}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$float.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}qwt3d\-\_\-types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qwt3d__types_8cpp_a2f6eec07b9a7cb8f9cdb95a56f60e7a0}{C\-M\-P\-M}(c, A, B)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{qwt3d__types_8cpp_a2f6eec07b9a7cb8f9cdb95a56f60e7a0}{\index{qwt3d\-\_\-types.\-cpp@{qwt3d\-\_\-types.\-cpp}!C\-M\-P\-M@{C\-M\-P\-M}}
+\index{C\-M\-P\-M@{C\-M\-P\-M}!qwt3d_types.cpp@{qwt3d\-\_\-types.\-cpp}}
+\subsubsection[{C\-M\-P\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-M\-P\-M(
+\begin{DoxyParamCaption}
+\item[{}]{c, }
+\item[{}]{A, }
+\item[{}]{B}
+\end{DoxyParamCaption}
+)}}\label{qwt3d__types_8cpp_a2f6eec07b9a7cb8f9cdb95a56f60e7a0}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+v = (*(coordinate\_type**)A)[c] - (*(coordinate\_type**)B)[c];\(\backslash\)
+  if (v>0) return 1;\(\backslash\)
+  if (v<0) return -1;
+\end{DoxyCode}
+
+
+Definition at line 28 of file qwt3d\-\_\-types.\-cpp.
+

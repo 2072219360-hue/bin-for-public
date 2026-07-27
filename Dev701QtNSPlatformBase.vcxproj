@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B72953E9-FDA2-3E25-87BB-BC306E6C393E}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>binForPublic\</OutDir>
+    <IntDir>generated\obj\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>E:\Qt\5.14.1\msvc2017_64\include;E:\Project20260602\Dev701QtNSPlatformBase\VTK\include\vtk-8.2;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>binForPublic\</OutDir>
+    <IntDir>generated\obj\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <IncludePath>C:\BuildTools2017\VC\Tools\MSVC\14.16.27023\atlmfc\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <IncludePath>E:\Project20260602\MicrosoftEdge\afxres;E:\Project20260602\Dev701QtNSPlatformBase\VTK\include\vtk-8.2;E:\Qt\5.14.1\msvc2017_64\include\QtWidgets;E:\Qt\5.14.1\msvc2017_64\include;E:\Project20260602\Dev701QtNSPlatformBase\src\log4qt;E:\Project20260602\Dev701QtNSPlatformBase\src\json;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Project20260602\Dev701QtNSPlatformBase\src\qwt\lib;E:\Project20260602\Dev701QtNSPlatformBase\Qssh-master\lib;E:\Project20260602\Dev701QtNSPlatformBase\lib;$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+    <OutDir>E:\Project20260602\Dev701QtNSPlatformBase\binForPublic</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>E:\Qt\5.14.1\msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
+    <QtInstall>E:\Qt\5.14.1\msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>E:\Qt\5.14.1\msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="QtSettings">
+    <QtInstall>E:\Qt\5.14.1\msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;widgets;charts</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.28307.799</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:\Qt\5.14.1\msvc2017_64\include;E:\Qt\5.14.1\msvc2017_64\include\QtUiTools;E:\Qt\5.14.1\msvc2017_64\include\QtCore;E:\Qt\5.14.1\msvc2017_64\include\QtNetwork;E:\Qt\5.14.1\msvc2017_64\include\QtGui;E:\Qt\5.14.1\msvc2017_64\include\QtOpenGL;E:\Qt\5.14.1\msvc2017_64\include\QtXml;E:\Qt\5.14.1\msvc2017_64\include\QtSql;.;src;src\qwt\include;src\qwtplot3d\include;src\QGLViewer\include;src\testqwtplot3d\mesh2;E:\Qt\5.14.1\msvc2017_64\include\ActiveQt;generated\moc;generated\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>generated\obj\</AssemblerListingLocation>
+      <ObjectFileName>generated\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_SQL_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;E:\Project20260602\Dev701QtNSPlatformBase/lib/\huangqwtd.lib;E:\Project20260602\Dev701QtNSPlatformBase/lib/\huangqwtplot3d.lib;E:\Project20260602\Dev701QtNSPlatformBase/lib/\HuangzbQGLVastyellowd2.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Sqld.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Xmld.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5OpenGLd.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Guid.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Networkd.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Dev701QtNSPlatformBase.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>E:\Qt\5.14.1\msvc2017_64\lib;E:\Project20260602\Dev701QtNSPlatformBase\lib;E:\Project20260602\Dev701QtNSPlatformBase\src\QGLViewer\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile />
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration />
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>generated\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>generated\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>generated\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>E:\Project20260602\Dev701QtNSPlatformBase\src\log4qt;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:\Qt\5.14.1\msvc2017_64\include\QtWidgets;E:\Project20260602\Dev701QtNSPlatformBase\VTK\include\vtk-8.2;E:\Qt\5.14.1\msvc2017_64\include\QtOpenGL;E:\Qt\5.14.1\msvc2017_64\include;E:\Qt\5.14.1\msvc2017_64\include\QtUiTools;E:\Qt\5.14.1\msvc2017_64\include\QtCore;E:\Qt\5.14.1\msvc2017_64\include\QtNetwork;E:\Qt\5.14.1\msvc2017_64\include\QtGui;E:\Qt\5.14.1\msvc2017_64\include\QtXml;E:\Qt\5.14.1\msvc2017_64\include\QtCharts;E:\Qt\5.14.1\msvc2017_64\include\QtSql;E:\Project20260602\MicrosoftEdge\afxres;E:\Project20260602\Dev701QtNSPlatformBase\Qssh-master\src;.;src;src\qwt\include;src\qwtplot3d\include;src\QGLViewer\include;src\testqwtplot3d\mesh2;E:\Qt\5.14.1\msvc2017_64\include\ActiveQt;generated\moc;generated\ui;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>generated\obj\</AssemblerListingLocation>
+      <ObjectFileName>generated\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN64;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_SQL_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>E:\Qt\5.14.1\msvc2017_64\lib\Qt5OpenGL.lib;.\VTK\lib\vtkGUISupportQt-8.2.lib;.\VTK\lib\vtkIOLegacy-8.2.lib;.\VTK\lib\vtkRenderingOpenGL2-8.2.lib;.\VTK\lib\vtkRenderingCore-8.2.lib;.\VTK\lib\vtkFiltersCore-8.2.lib;.\VTK\lib\vtkIOCore-8.2.lib;.\VTK\lib\vtkCommonExecutionModel-8.2.lib;.\VTK\lib\vtkCommonDataModel-8.2.lib;.\VTK\lib\vtkCommonTransforms-8.2.lib;.\VTK\lib\vtkCommonMisc-8.2.lib;.\VTK\lib\vtkCommonMath-8.2.lib;.\VTK\lib\vtkCommonCore-8.2.lib;.\VTK\lib\QVTKWidgetPlugin.lib;.\VTK\lib\vtkChartsCore-8.2.lib;.\VTK\lib\vtkCommonColor-8.2.lib;.\VTK\lib\vtkCommonComputationalGeometry-8.2.lib;.\VTK\lib\vtkCommonSystem-8.2.lib;.\VTK\lib\vtkDICOMParser-8.2.lib;.\VTK\lib\vtkDomainsChemistry-8.2.lib;.\VTK\lib\vtkDomainsChemistryOpenGL2-8.2.lib;.\VTK\lib\vtkdoubleconversion-8.2.lib;.\VTK\lib\vtkexodusII-8.2.lib;.\VTK\lib\vtkexpat-8.2.lib;.\VTK\lib\vtkFiltersAMR-8.2.lib;.\VTK\lib\vtkFiltersExtraction-8.2.lib;.\VTK\lib\vtkFiltersFlowPaths-8.2.lib;.\VTK\lib\vtkFiltersGeneral-8.2.lib;.\VTK\lib\vtkFiltersGeneric-8.2.lib;.\VTK\lib\vtkFiltersGeometry-8.2.lib;.\VTK\lib\vtkFiltersHybrid-8.2.lib;.\VTK\lib\vtkFiltersHyperTree-8.2.lib;.\VTK\lib\vtkFiltersImaging-8.2.lib;.\VTK\lib\vtkFiltersModeling-8.2.lib;.\VTK\lib\vtkFiltersParallel-8.2.lib;.\VTK\lib\vtkFiltersParallelImaging-8.2.lib;.\VTK\lib\vtkFiltersPoints-8.2.lib;.\VTK\lib\vtkFiltersProgrammable-8.2.lib;.\VTK\lib\vtkFiltersSelection-8.2.lib;.\VTK\lib\vtkFiltersSMP-8.2.lib;.\VTK\lib\vtkFiltersSources-8.2.lib;.\VTK\lib\vtkFiltersStatistics-8.2.lib;.\VTK\lib\vtkFiltersTexture-8.2.lib;.\VTK\lib\vtkFiltersTopology-8.2.lib;.\VTK\lib\vtkFiltersVerdict-8.2.lib;.\VTK\lib\vtkfreetype-8.2.lib;.\VTK\lib\vtkGeovisCore-8.2.lib;.\VTK\lib\vtkgl2ps-8.2.lib;.\VTK\lib\vtkglew-8.2.lib;.\VTK\lib\vtkGUISupportQtOpenGL-8.2.lib;.\VTK\lib\vtkGUISupportQtSQL-8.2.lib;.\VTK\lib\vtkhdf5-8.2.lib;.\VTK\lib\vtkhdf5_hl-8.2.lib;.\VTK\lib\vtkImagingColor-8.2.lib;.\VTK\lib\vtkImagingCore-8.2.lib;.\VTK\lib\vtkImagingFourier-8.2.lib;.\VTK\lib\vtkImagingGeneral-8.2.lib;.\VTK\lib\vtkImagingHybrid-8.2.lib;.\VTK\lib\vtkImagingMath-8.2.lib;.\VTK\lib\vtkImagingMorphological-8.2.lib;.\VTK\lib\vtkImagingSources-8.2.lib;.\VTK\lib\vtkImagingStatistics-8.2.lib;.\VTK\lib\vtkImagingStencil-8.2.lib;.\VTK\lib\vtkInfovisCore-8.2.lib;.\VTK\lib\vtkInfovisLayout-8.2.lib;.\VTK\lib\vtkInteractionImage-8.2.lib;.\VTK\lib\vtkInteractionStyle-8.2.lib;.\VTK\lib\vtkInteractionWidgets-8.2.lib;.\VTK\lib\vtkIOAMR-8.2.lib;.\VTK\lib\vtkIOAsynchronous-8.2.lib;.\VTK\lib\vtkIOCityGML-8.2.lib;.\VTK\lib\vtkIOEnSight-8.2.lib;.\VTK\lib\vtkIOExodus-8.2.lib;.\VTK\lib\vtkIOExport-8.2.lib;.\VTK\lib\vtkIOExportOpenGL2-8.2.lib;.\VTK\lib\vtkIOExportPDF-8.2.lib;.\VTK\lib\vtkIOGeometry-8.2.lib;.\VTK\lib\vtkIOImage-8.2.lib;.\VTK\lib\vtkIOImport-8.2.lib;.\VTK\lib\vtkIOInfovis-8.2.lib;.\VTK\lib\vtkIOLSDyna-8.2.lib;.\VTK\lib\vtkIOMINC-8.2.lib;.\VTK\lib\vtkIOMovie-8.2.lib;.\VTK\lib\vtkIONetCDF-8.2.lib;.\VTK\lib\vtkIOParallel-8.2.lib;.\VTK\lib\vtkIOParallelXML-8.2.lib;.\VTK\lib\vtkIOPLY-8.2.lib;.\VTK\lib\vtkIOSegY-8.2.lib;.\VTK\lib\vtkIOSQL-8.2.lib;.\VTK\lib\vtkIOTecplotTable-8.2.lib;.\VTK\lib\vtkIOVeraOut-8.2.lib;.\VTK\lib\vtkIOVideo-8.2.lib;.\VTK\lib\vtkIOXML-8.2.lib;.\VTK\lib\vtkIOXMLParser-8.2.lib;.\VTK\lib\vtkjpeg-8.2.lib;.\VTK\lib\vtkjsoncpp-8.2.lib;.\VTK\lib\vtklibharu-8.2.lib;.\VTK\lib\vtklibxml2-8.2.lib;.\VTK\lib\vtklz4-8.2.lib;.\VTK\lib\vtklzma-8.2.lib;.\VTK\lib\vtkmetaio-8.2.lib;.\VTK\lib\vtkNetCDF-8.2.lib;.\VTK\lib\vtkogg-8.2.lib;.\VTK\lib\vtkParallelCore-8.2.lib;.\VTK\lib\vtkpng-8.2.lib;.\VTK\lib\vtkproj-8.2.lib;.\VTK\lib\vtkpugixml-8.2.lib;.\VTK\lib\vtkRenderingAnnotation-8.2.lib;.\VTK\lib\vtkRenderingContext2D-8.2.lib;.\VTK\lib\vtkRenderingContextOpenGL2-8.2.lib;.\VTK\lib\vtkRenderingFreeType-8.2.lib;.\VTK\lib\vtkRenderingGL2PSOpenGL2-8.2.lib;.\VTK\lib\vtkRenderingImage-8.2.lib;.\VTK\lib\vtkRenderingLabel-8.2.lib;.\VTK\lib\vtkRenderingLOD-8.2.lib;.\VTK\lib\vtkRenderingQt-8.2.lib;.\VTK\lib\vtkRenderingVolume-8.2.lib;.\VTK\lib\vtkRenderingVolumeOpenGL2-8.2.lib;.\VTK\lib\vtksqlite-8.2.lib;.\VTK\lib\vtksys-8.2.lib;.\VTK\lib\vtktheora-8.2.lib;.\VTK\lib\vtktiff-8.2.lib;.\VTK\lib\vtkverdict-8.2.lib;.\VTK\lib\vtkViewsContext2D-8.2.lib;.\VTK\lib\vtkViewsCore-8.2.lib;.\VTK\lib\vtkViewsInfovis-8.2.lib;.\VTK\lib\vtkViewsQt-8.2.lib;.\VTK\lib\vtkzlib-8.2.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Sqld.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Xmld.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5OpenGLd.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Guid.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Networkd.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Cored.lib;E:\Qt\5.14.1\msvc2017_64\lib\Qt5Chartsd.lib;Qt5Widgetsd.lib;QSshd.lib;jsoncpp.lib;jsoncpp_static.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)Dev701QtNSPlatformBase.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>E:\Qt\5.14.1\msvc2017_64\lib;E:\Project20260602\Dev701QtNSPlatformBase\lib;E:\Project20260602\Dev701QtNSPlatformBase\src\QGLViewer\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+      <TargetMachine>MachineX64</TargetMachine>
+      <TypeLibraryResourceID>3</TypeLibraryResourceID>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>generated\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>generated\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>generated\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:\Qt\5.14.1\msvc2017_64\include\QtUiTools;E:\Qt\5.14.1\msvc2017_64\include\QtCore;E:\Qt\5.14.1\msvc2017_64\include\QtNetwork;E:\Qt\5.14.1\msvc2017_64\include\QtGui;E:\Qt\5.14.1\msvc2017_64\include\QtOpenGL;E:\Qt\5.14.1\msvc2017_64\include\QtXml;E:\Qt\5.14.1\msvc2017_64\include\QtSql;E:\Qt\5.14.1\msvc2017_64\include;.;src;src\qwt\include;src\qwtplot3d\include;src\QGLViewer\include;src\testqwtplot3d\mesh2;E:\Qt\5.14.1\msvc2017_64\include\ActiveQt;generated\moc;generated\ui;E:\Qt\5.14.1\msvc2017_64\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>generated\obj\</AssemblerListingLocation>
+      <ObjectFileName>generated\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_SQL_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\huangqwt.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\huangqwtplot3d.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\HuangzbQGLVastyellow2.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtSql4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtXml4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtOpenGL4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtGui4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtNetwork4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtCore4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtUiTools.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtXml4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtGui4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Dev701QtNSPlatformBase.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>E:\Qt\5.14.1\msvc2017_64\lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/;E:/Project20260602/Dev701QtNSPlatformBase/src/qwtplot3d/lib/;E:/Project20260602/Dev701QtNSPlatformBase/src/QGLViewer/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration />
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>generated\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>generated\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>generated\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <WarningLevel>0</WarningLevel>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;E:\Qt\5.14.1\msvc2017_64\include\QtUiTools;E:\Qt\5.14.1\msvc2017_64\include\QtCore;E:\Qt\5.14.1\msvc2017_64\include\QtNetwork;E:\Qt\5.14.1\msvc2017_64\include\QtGui;E:\Qt\5.14.1\msvc2017_64\include\QtOpenGL;E:\Qt\5.14.1\msvc2017_64\include\QtXml;E:\Qt\5.14.1\msvc2017_64\include\QtSql;E:\Qt\5.14.1\msvc2017_64\include;.;src;src\qwt\include;src\qwtplot3d\include;src\QGLViewer\include;src\testqwtplot3d\mesh2;E:\Qt\5.14.1\msvc2017_64\include\ActiveQt;generated\moc;generated\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerListingLocation>generated\obj\</AssemblerListingLocation>
+      <ObjectFileName>generated\obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;QT_LARGEFILE_SUPPORT;ROCKMAN;QT_DLL;QWT_DLL;QT_DLL;QWT_DLL;QT_DLL;QWT3D_DLL;QT_THREAD_SUPPORT;QT_DLL;QT_NO_DEBUG;QT_SQL_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type=%27win32%27 name=%27Microsoft.Windows.Common-Controls%27 version=%276.0.0.0%27 publicKeyToken=%276595b64144ccf1df%27 language=%27*%27 processorArchitecture=%27*%27" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\huangqwt.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\huangqwtplot3d.lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/\HuangzbQGLVastyellow2.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtSql4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtXml4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtOpenGL4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtGui4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtNetwork4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtCore4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtUiTools.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtXml4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtGui4.lib;E:\Qt\5.14.1\msvc2017_64\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Dev701QtNSPlatformBase.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>E:\Qt\5.14.1\msvc2017_64\lib;E:/Project20260602/Dev701QtNSPlatformBase/lib/;E:/Project20260602/Dev701QtNSPlatformBase/src/qwtplot3d/lib/;E:/Project20260602/Dev701QtNSPlatformBase/src/QGLViewer/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <QtMoc>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>generated\moc</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>generated\ui</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>generated\rcc</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="argData.cpp" />
+    <ClCompile Include="ArgWindow.cpp" />
+    <ClCompile Include="BatchConfigWidget.cpp" />
+    <ClCompile Include="batchProcess.cpp" />
+    <ClCompile Include="BatchSSPNS.cpp" />
+    <ClCompile Include="bodyPathChecker.cpp" />
+    <ClCompile Include="btnObserver.cpp" />
+    <ClCompile Include="btnWiget.cpp" />
+    <ClCompile Include="computeLPCWSTR.cpp" />
+    <ClCompile Include="fileParamChecker.cpp" />
+    <ClCompile Include="checkProgramStrategy.cpp" />
+    <ClCompile Include="clearStrategy.cpp" />
+    <ClCompile Include="ColorChooseDialog.cpp" />
+    <ClCompile Include="computeLiutex.cpp" />
+    <ClCompile Include="createBoundata.cpp" />
+    <ClCompile Include="CreateFullDataset.cpp" />
+    <ClCompile Include="CreateTrees.cpp" />
+    <ClCompile Include="CusButton.cpp" />
+    <ClCompile Include="dataServer.cpp" />
+    <ClCompile Include="ECHV.cpp" />
+    <ClCompile Include="ECHVSignalInstance.cpp" />
+    <ClCompile Include="ECHVStrategy.cpp" />
+    <ClCompile Include="echvVTKWin.cpp" />
+    <ClCompile Include="fileOp.cpp" />
+    <ClCompile Include="FileOpUtils.cpp" />
+    <ClCompile Include="filePathComputer.cpp" />
+    <ClCompile Include="GraphWindow.cpp" />
+    <ClCompile Include="inputFileEditor.cpp" />
+    <ClCompile Include="InputHeader.cpp" />
+    <ClCompile Include="InputSet.cpp" />
+    <ClCompile Include="inp_process.cpp" />
+    <ClCompile Include="ISA_Calc.cpp" />
+    <ClCompile Include="logWidget.cpp" />
+    <ClCompile Include="myColorTable.cpp" />
+    <ClCompile Include="myDBSCAN.cpp" />
+    <ClCompile Include="myObserver.cpp" />
+    <ClCompile Include="mySubject.cpp" />
+    <ClCompile Include="nsStrategy.cpp" />
+    <ClCompile Include="Operator.cpp" />
+    <ClCompile Include="OutPutLogger.cpp" />
+    <ClCompile Include="ParamEditDialog.cpp" />
+    <ClCompile Include="ParamSetDialog.cpp" />
+    <ClCompile Include="pnsStrategy.cpp" />
+    <ClCompile Include="postgridsimplify.cpp" />
+    <ClCompile Include="PostProcessProfiling.cpp" />
+    <ClCompile Include="PostProgressDialog.cpp" />
+    <ClCompile Include="processPool.cpp" />
+    <ClCompile Include="ProgressDialog.cpp" />
+    <ClCompile Include="progressTable.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="projectWidget.cpp" />
+    <ClCompile Include="PTGeneration.cpp" />
+    <ClCompile Include="publicArgWindow.cpp" />
+    <ClCompile Include="readFileStrategy.cpp" />
+    <ClCompile Include="relevance.cpp" />
+    <ClCompile Include="runData.cpp" />
+    <ClCompile Include="RWThread.cpp" />
+    <ClCompile Include="SectInfoDialog.cpp" />
+    <ClCompile Include="sectStrategy.cpp" />
+    <ClCompile Include="SignalInstance.cpp" />
+    <ClCompile Include="SingletonBase.cpp" />
+    <ClCompile Include="src\CConnectionForSshClient.cpp" />
+    <ClCompile Include="src\huangglobalconfig.cpp" />
+    <ClCompile Include="src\huangmain.cpp" />
+    <ClCompile Include="src\huangmainwindow.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="src\log4qt\appenderskeleton.cpp" />
+    <ClCompile Include="src\log4qt\basicconfigurator.cpp" />
+    <ClCompile Include="src\log4qt\consoleappender.cpp" />
+    <ClCompile Include="src\log4qt\dailyrollingfileappender.cpp" />
+    <ClCompile Include="src\log4qt\fileappender.cpp" />
+    <ClCompile Include="src\log4qt\helpers\classlogger.cpp" />
+    <ClCompile Include="src\log4qt\helpers\configuratorhelper.cpp" />
+    <ClCompile Include="src\log4qt\helpers\datetime.cpp" />
+    <ClCompile Include="src\log4qt\helpers\factory.cpp" />
+    <ClCompile Include="src\log4qt\helpers\initialisationhelper.cpp" />
+    <ClCompile Include="src\log4qt\helpers\logerror.cpp" />
+    <ClCompile Include="src\log4qt\helpers\logobject.cpp" />
+    <ClCompile Include="src\log4qt\helpers\logobjectptr.cpp" />
+    <ClCompile Include="src\log4qt\helpers\optionconverter.cpp" />
+    <ClCompile Include="src\log4qt\helpers\patternformatter.cpp" />
+    <ClCompile Include="src\log4qt\helpers\properties.cpp" />
+    <ClCompile Include="src\log4qt\hierarchy.cpp" />
+    <ClCompile Include="src\log4qt\layout.cpp" />
+    <ClCompile Include="src\log4qt\level.cpp" />
+    <ClCompile Include="src\log4qt\log4qt.cpp" />
+    <ClCompile Include="src\log4qt\logger.cpp" />
+    <ClCompile Include="src\log4qt\loggerrepository.cpp" />
+    <ClCompile Include="src\log4qt\loggingevent.cpp" />
+    <ClCompile Include="src\log4qt\logmanager.cpp" />
+    <ClCompile Include="src\log4qt\mdc.cpp" />
+    <ClCompile Include="src\log4qt\ndc.cpp" />
+    <ClCompile Include="src\log4qt\patternlayout.cpp" />
+    <ClCompile Include="src\log4qt\propertyconfigurator.cpp" />
+    <ClCompile Include="src\log4qt\rollingfileappender.cpp" />
+    <ClCompile Include="src\log4qt\simplelayout.cpp" />
+    <ClCompile Include="src\log4qt\spi\filter.cpp" />
+    <ClCompile Include="src\log4qt\ttcclayout.cpp" />
+    <ClCompile Include="src\log4qt\varia\debugappender.cpp" />
+    <ClCompile Include="src\log4qt\varia\denyallfilter.cpp" />
+    <ClCompile Include="src\log4qt\varia\levelmatchfilter.cpp" />
+    <ClCompile Include="src\log4qt\varia\levelrangefilter.cpp" />
+    <ClCompile Include="src\log4qt\varia\listappender.cpp" />
+    <ClCompile Include="src\log4qt\varia\nullappender.cpp" />
+    <ClCompile Include="src\log4qt\varia\stringmatchfilter.cpp" />
+    <ClCompile Include="src\log4qt\writerappender.cpp" />
+    <ClCompile Include="src\scenewidget.cpp" />
+    <ClCompile Include="src\Widget.cpp" />
+    <ClCompile Include="SSPNS.cpp" />
+    <ClCompile Include="statusSubject.cpp" />
+    <ClCompile Include="StyleWidgetFactory.cpp" />
+    <ClCompile Include="SubZoneWindow.cpp" />
+    <ClCompile Include="SwitchButton.cpp" />
+    <ClCompile Include="sync_trData_input.cpp" />
+    <ClCompile Include="transGrid.cpp" />
+    <ClCompile Include="TrTableShow.cpp" />
+    <ClCompile Include="unionFindCT.cpp" />
+    <ClCompile Include="updateBatchArgs.cpp" />
+    <ClCompile Include="updateStrategy.cpp" />
+    <ClCompile Include="USStandardAtmosphere.cpp" />
+    <ClCompile Include="workContext.cpp" />
+    <ClCompile Include="workerHandler.cpp" />
+    <ClCompile Include="workFlow.cpp" />
+    <ClCompile Include="WorkSpaceOp.cpp" />
+    <ClCompile Include="WorkSpaceOpDialog.cpp" />
+    <ClCompile Include="workSpaceStarter.cpp" />
+    <ClCompile Include="workStrategy.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bodyPathChecker.h" />
+    <ClInclude Include="computeLPCWSTR.h" />
+    <ClInclude Include="fileParamChecker.h" />
+    <ClInclude Include="checkProgramStrategy.h" />
+    <ClInclude Include="clearStrategy.h" />
+    <ClInclude Include="filePathComputer.h" />
+    <ClInclude Include="inputFileEditor.h" />
+    <ClInclude Include="nsStrategy.h" />
+    <QtMoc Include="ParamEditDialog.h" />
+    <ClInclude Include="pnsStrategy.h" />
+    <QtMoc Include="projectWidget.h" />
+    <QtMoc Include="PostProgressDialog.h" />
+    <ClInclude Include="PTGeneration.h" />
+    <ClInclude Include="readFileStrategy.h" />
+    <ClInclude Include="sectStrategy.h" />
+    <QtMoc Include="SubZoneWindow.h" />
+    <ClInclude Include="StyleWidgetFactory.h" />
+    <ClInclude Include="sync_trData_input.h" />
+    <ClInclude Include="updateBatchArgs.h" />
+    <ClInclude Include="updateStrategy.h" />
+    <ClInclude Include="USStandardAtmosphere.h" />
+    <ClInclude Include="workContext.h" />
+    <ClInclude Include="workerHandler.h" />
+    <ClInclude Include="workFlow.h" />
+    <ClInclude Include="workSpaceStarter.h" />
+    <ClInclude Include="workStrategy.h" />
+    <QtMoc Include="BatchSSPNS.h" />
+    <ClInclude Include="batchCommon.h" />
+    <QtMoc Include="batchProcess.h" />
+    <ClInclude Include="btnObserver.h" />
+    <QtMoc Include="btnWiget.h" />
+    <ClInclude Include="computeLiutex.h" />
+    <ClInclude Include="createBoundata.h" />
+    <ClInclude Include="CreateFullDataset.h" />
+    <ClInclude Include="CreateTrees.h" />
+    <QtMoc Include="logWidget.h" />
+    <ClInclude Include="FileOpUtils.h" />
+    <ClInclude Include="inp_process.h" />
+    <ClInclude Include="ISA_Calc.h" />
+    <ClInclude Include="myDBSCAN.h" />
+    <ClInclude Include="myObserver.h" />
+    <ClInclude Include="mySubject.h" />
+    <QtMoc Include="ParamSetDialog.h" />
+    <QtMoc Include="PostProcessProfiling.h" />
+    <ClInclude Include="processPool.h" />
+    <QtMoc Include="ProgressDialog.h" />
+    <QtMoc Include="progressTable.h" />
+    <QtMoc Include="publicArgWindow.h" />
+    <ClInclude Include="relevance.h" />
+    <ClInclude Include="statusSubject.h" />
+    <ClInclude Include="transGrid.h" />
+    <ClInclude Include="unionFindCT.h" />
+    <QtMoc Include="SwitchButton.h" />
+    <QtMoc Include="WorkSpaceOpDialog.h" />
+    <QtMoc Include="WorkSpaceOp.h" />
+    <QtMoc Include="SSPNS.h" />
+    <QtMoc Include="TrTableShow.h" />
+    <QtMoc Include="InputSet.h" />
+    <QtMoc Include="CusButton.h" />
+    <QtMoc Include="BatchConfigWidget.h" />
+    <ClInclude Include="argData.h" />
+    <QtMoc Include="ArgWindow.h" />
+    <ClInclude Include="ColorChooseDialog.h" />
+    <ClInclude Include="Common.h" />
+    <QtMoc Include="InputHeader.h" />
+    <QtMoc Include="OutPutLogger.h" />
+    <QtMoc Include="ECHV.h" />
+    <QtMoc Include="ECHVSignalInstance.h" />
+    <QtMoc Include="dataServer.h" />
+    <ClInclude Include="ECHVStrategy.h" />
+    <QtMoc Include="echvVTKWin.h" />
+    <ClInclude Include="fileOp.h" />
+    <QtMoc Include="GraphWindow.h" />
+    <ClInclude Include="myColorTable.h" />
+    <QtMoc Include="Operator.h" />
+    <QtMoc Include="postgridsimplify.h" />
+    <ClInclude Include="qtcommon.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="src\Widget.h" />
+    <QtMoc Include="src\scenewidget.h" />
+    <QtMoc Include="SignalInstance.h" />
+    <QtMoc Include="RWThread.h" />
+    <QtMoc Include="SectInfoDialog.h" />
+    <QtMoc Include="src\CConnectionForSshClient.h" />
+    <QtMoc Include="src\huangmainwindow.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\appenderskeleton.h">
+    </QtMoc>
+    <QtMoc Include="SingletonBase.h" />
+    <ClInclude Include="runData.h" />
+    <ClInclude Include="src\huangglobalconfig.h" />
+    <QtMoc Include="src\log4qt\appender.h" />
+    <ClInclude Include="src\log4qt\basicconfigurator.h" />
+    <QtMoc Include="src\log4qt\consoleappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\dailyrollingfileappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\fileappender.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\helpers\classlogger.h" />
+    <QtMoc Include="src\log4qt\helpers\configuratorhelper.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\helpers\datetime.h" />
+    <ClInclude Include="src\log4qt\helpers\factory.h" />
+    <ClInclude Include="src\log4qt\helpers\initialisationhelper.h" />
+    <ClInclude Include="src\log4qt\helpers\logerror.h" />
+    <QtMoc Include="src\log4qt\helpers\logobject.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\helpers\logobjectptr.h" />
+    <ClInclude Include="src\log4qt\helpers\optionconverter.h" />
+    <ClInclude Include="src\log4qt\helpers\patternformatter.h" />
+    <ClInclude Include="src\log4qt\helpers\properties.h" />
+    <ClInclude Include="src\log4qt\hierarchy.h" />
+    <QtMoc Include="src\log4qt\layout.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\level.h" />
+    <ClInclude Include="src\log4qt\log4qt.h" />
+    <QtMoc Include="src\log4qt\logger.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\loggerrepository.h" />
+    <ClInclude Include="src\log4qt\loggingevent.h" />
+    <ClInclude Include="src\log4qt\logmanager.h" />
+    <ClInclude Include="src\log4qt\mdc.h" />
+    <ClInclude Include="src\log4qt\ndc.h" />
+    <QtMoc Include="src\log4qt\patternlayout.h">
+    </QtMoc>
+    <ClInclude Include="src\log4qt\propertyconfigurator.h" />
+    <QtMoc Include="src\log4qt\rollingfileappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\simplelayout.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\spi\filter.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\ttcclayout.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\debugappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\denyallfilter.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\levelmatchfilter.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\levelrangefilter.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\listappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\nullappender.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\varia\stringmatchfilter.h">
+    </QtMoc>
+    <QtMoc Include="src\log4qt\writerappender.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ccconfigdialog.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ccconfigdialog</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ccconfigdialog</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ccconfigdialog</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ccconfigdialog</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="classwizard.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">classwizard</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">classwizard</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">classwizard</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">classwizard</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="Dev701QtNSPlatformBaseMain.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Dev701QtNSPlatformBaseMain</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Dev701QtNSPlatformBaseMain</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Dev701QtNSPlatformBaseMain</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Dev701QtNSPlatformBaseMain</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="GLWidget.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">GLWidget</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">GLWidget</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">GLWidget</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">GLWidget</InitFuncName>
+    </QtRcc>
+    <None Include="batchProcess.tpp" />
+    <None Include="lang\Dev701QtNSPlatformBase_zh.ts" />
+    <None Include="lang\Dev701QtNSPlatformBase_zh_CN.ts" />
+    <QtRcc Include="mesh2.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mesh2</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mesh2</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mesh2</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mesh2</InitFuncName>
+    </QtRcc>
+    <None Include="qss\coffee.qss" />
+    <None Include="qss\default.qss" />
+    <None Include="qss\pagefold.qss" />
+    <None Include="qt_zh_CN.qm" />
+    <QtRcc Include="Resource2.qrc" />
+    <QtRcc Include="resources\resources.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">resources</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">resources</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">resources</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">resources</InitFuncName>
+    </QtRcc>
+    <QtUic Include="src\postprocessQWT3D\lightingdlgbase4.ui">
+    </QtUic>
+    <QtUic Include="src\postprocessQWT3D\mesh2mainwindowbase4.ui">
+    </QtUic>
+    <QtUic Include="src\testQGLViewer\viewerInterfacedialog.Qt4.ui">
+    </QtUic>
+    <QtUic Include="src\testQGLViewer\viewerInterfacewidget.Qt4.ui">
+    </QtUic>
+    <QtRcc Include="stylesheet.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stylesheet</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stylesheet</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stylesheet</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stylesheet</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="uiloader.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">uiloader</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">uiloader</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">uiloader</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">uiloader</InitFuncName>
+    </QtRcc>
+    <QtUic Include="ui\findwidget.ui">
+    </QtUic>
+    <QtUic Include="ui\first.ui">
+    </QtUic>
+    <QtUic Include="ui\fontdialog.ui">
+    </QtUic>
+    <QtUic Include="ui\linecolumnwidget.ui">
+    </QtUic>
+    <QtUic Include="ui\mainwindowOfstylesheet.ui">
+    </QtUic>
+    <QtUic Include="ui\second.ui">
+    </QtUic>
+    <QtUic Include="ui\stylesheeteditor.ui">
+    </QtUic>
+    <None Include="ui\third.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\2Dpost.png" />
+    <Image Include="images\3Dpost.png" />
+    <Image Include="images\Ability_BackStab.jpg" />
+    <Image Include="images\Ability_Gouge.jpg" />
+    <Image Include="images\apple.jpg" />
+    <Image Include="images\apple1.jpg" />
+    <Image Include="images\apple2.jpg" />
+    <Image Include="images\background.png" />
+    <Image Include="images\Ball.bmp" />
+    <Image Include="images\banner.png" />
+    <Image Include="images\basedata.png" />
+    <Image Include="images\BG.bmp" />
+    <Image Include="images\bg.jpg" />
+    <Image Include="images\book.png" />
+    <Image Include="images\box.png" />
+    <Image Include="images\brown.png" />
+    <Image Include="images\bumps.bmp" />
+    <Image Include="images\ceiling.png" />
+    <Image Include="images\checkbox_checked.png" />
+    <Image Include="images\checkbox_checked_hover.png" />
+    <Image Include="images\checkbox_checked_pressed.png" />
+    <Image Include="images\checkbox_unchecked.png" />
+    <Image Include="images\checkbox_unchecked_hover.png" />
+    <Image Include="images\checkbox_unchecked_pressed.png" />
+    <Image Include="images\clusterMPIEnv.png" />
+    <Image Include="images\clusterMPIrun.png" />
+    <Image Include="images\config.png" />
+    <Image Include="images\crate.bmp" />
+    <Image Include="images\cube.bmp" />
+    <Image Include="images\default.ico" />
+    <Image Include="images\default.png" />
+    <Image Include="images\door.png" />
+    <Image Include="images\down_arrow.png" />
+    <Image Include="images\down_arrow_disabled.png" />
+    <Image Include="images\EditInsp.png" />
+    <Image Include="images\Envroll.bmp" />
+    <Image Include="images\Envwall.bmp" />
+    <Image Include="images\Exit.png" />
+    <Image Include="images\filecell.png" />
+    <Image Include="images\fileopen.png" />
+    <Image Include="images\filledmesh.png" />
+    <Image Include="images\floor.png" />
+    <Image Include="images\floordata.png" />
+    <Image Include="images\floorempty.png" />
+    <Image Include="images\flooriso.png" />
+    <Image Include="images\floormesh.png" />
+    <Image Include="images\font.bmp" />
+    <Image Include="images\Font.tga" />
+    <Image Include="images\frame.png" />
+    <Image Include="images\FreeBSD.png" />
+    <Image Include="images\glass.bmp" />
+    <Image Include="images\grid.png" />
+    <Image Include="images\gridb.png" />
+    <Image Include="images\gridc.png" />
+    <Image Include="images\gridf.png" />
+    <Image Include="images\gridfr.png" />
+    <Image Include="images\gridInsp.png" />
+    <Image Include="images\gridl.png" />
+    <Image Include="images\gridpre.png" />
+    <Image Include="images\gridr.png" />
+    <Image Include="images\Hacker2.png" />
+    <Image Include="images\hiddenline.png" />
+    <Image Include="images\icon.png" />
+    <Image Include="images\Image.bmp" />
+    <Image Include="images\Image1.bmp" />
+    <Image Include="images\Image2.bmp" />
+    <Image Include="images\INV_Chest_Chain_14.jpg" />
+    <Image Include="images\INV_Gauntlets_03.jpg" />
+    <Image Include="images\INV_Jewelry_Amulet_04.jpg" />
+    <Image Include="images\INV_Jewelry_Ring_26.jpg" />
+    <Image Include="images\INV_Jewelry_Talisman_01.jpg" />
+    <Image Include="images\INV_Misc_Book_06.jpg" />
+    <Image Include="images\INV_Misc_Horn_02.jpg" />
+    <Image Include="images\INV_Scroll_02.jpg" />
+    <Image Include="images\INV_Shield_02.jpg" />
+    <Image Include="images\INV_Stone_05.jpg" />
+    <Image Include="images\INV_Sword_09.jpg" />
+    <Image Include="images\INV_Sword_25.jpg" />
+    <Image Include="images\INV_ThrowingKnife_04.jpg" />
+    <Image Include="images\INV_Weapon_Crossbow_10.jpg" />
+    <Image Include="images\Logo.bmp" />
+    <Image Include="images\logo1.png" />
+    <Image Include="images\logo2.png" />
+    <Image Include="images\logo3.png" />
+    <Image Include="images\Mask1.bmp" />
+    <Image Include="images\Mask2.bmp" />
+    <Image Include="images\movie.png" />
+    <Image Include="images\nehe.bmp" />
+    <Image Include="images\new.png" />
+    <Image Include="images\nodata.png" />
+    <Image Include="images\none.png" />
+    <Image Include="images\normals.png" />
+    <Image Include="images\option.png" />
+    <Image Include="images\pagefold.png" />
+    <Image Include="images\Particle.bmp" />
+    <Image Include="images\polygon.png" />
+    <Image Include="images\print.png" />
+    <Image Include="images\pushbutton.png" />
+    <Image Include="images\pushbutton_hover.png" />
+    <Image Include="images\pushbutton_pressed.png" />
+    <Image Include="images\query.png" />
+    <Image Include="images\qwtplot.png" />
+    <Image Include="images\radiobutton_checked.png" />
+    <Image Include="images\radiobutton_checked_hover.png" />
+    <Image Include="images\radiobutton_checked_pressed.png" />
+    <Image Include="images\radiobutton_unchecked.png" />
+    <Image Include="images\radiobutton_unchecked_hover.png" />
+    <Image Include="images\radiobutton_unchecked_pressed.png" />
+    <Image Include="images\Reflect.bmp" />
+    <Image Include="images\resultBrowser.png" />
+    <Image Include="images\runBrowser.png" />
+    <Image Include="images\runParam.png" />
+    <Image Include="images\save.png" />
+    <Image Include="images\savecontent.png" />
+    <Image Include="images\SaveInsp.png" />
+    <Image Include="images\scattered.png" />
+    <Image Include="images\setViewDirectionToNegativeX.png" />
+    <Image Include="images\setViewDirectionToNegativeY.png" />
+    <Image Include="images\setViewDirectionToNegativeZ.png" />
+    <Image Include="images\setViewDirectionToX.png" />
+    <Image Include="images\setViewDirectionToY.png" />
+    <Image Include="images\setViewDirectionToZ.png" />
+    <Image Include="images\showinsp.png" />
+    <Image Include="images\singleMPIenv.png" />
+    <Image Include="images\singleMPIrun.png" />
+    <Image Include="images\sizegrip.png" />
+    <Image Include="images\Spell_Fire_Incinerate.jpg" />
+    <Image Include="images\spindown.png" />
+    <Image Include="images\spindown_hover.png" />
+    <Image Include="images\spindown_off.png" />
+    <Image Include="images\spindown_pressed.png" />
+    <Image Include="images\spinup.png" />
+    <Image Include="images\spinup_hover.png" />
+    <Image Include="images\spinup_off.png" />
+    <Image Include="images\spinup_pressed.png" />
+    <Image Include="images\splash.jpg" />
+    <Image Include="images\temp.ico" />
+    <Image Include="images\tim.bmp" />
+    <Image Include="images\toolbar1.bmp" />
+    <Image Include="images\undo.png" />
+    <Image Include="images\update.png" />
+    <Image Include="images\up_arrow.png" />
+    <Image Include="images\up_arrow_disabled.png" />
+    <Image Include="images\w2.jpg" />
+    <Image Include="images\Wall.bmp" />
+    <Image Include="images\war1.png" />
+    <Image Include="images\war2.png" />
+    <Image Include="images\war3.png" />
+    <Image Include="images\war4.png" />
+    <Image Include="images\war5.png" />
+    <Image Include="images\war6.png" />
+    <Image Include="images\watermark1.png" />
+    <Image Include="images\watermark2.png" />
+    <Image Include="images\wireframe.png" />
+    <Image Include="images\zoomin.png" />
+    <Image Include="images\zoomout.png" />
+    <Image Include="images\云图模式.png" />
+    <Image Include="images\散点模式.png" />
+    <Image Include="images\显示图例.png" />
+    <Image Include="images\网格模式.png" />
+    <Image Include="images\网面模式.png" />
+    <Image Include="images\表面模式.png" />
+    <Image Include="images\轮廓模式.png" />
+    <Image Include="images\隐藏图例.png" />
+    <Image Include="resources\closetab.png" />
+    <Image Include="resources\icon3-240.png" />
+    <Image Include="resources\icon4-16.png" />
+    <Image Include="resources\icon4-24.png" />
+    <Image Include="resources\icon4-32.png" />
+    <Image Include="resources\icon5-16.png" />
+    <Image Include="resources\icon5-24.png" />
+    <Image Include="resources\icon5-32.png" />
+    <Image Include="resources\icon5-48.png" />
+    <Image Include="resources\PNG\application-exit.png" />
+    <Image Include="resources\PNG\edit-delete.png" />
+    <Image Include="resources\PNG\Folder.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Arrow-Left.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Arrow-Right.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Copy.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Cut.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Document.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Find.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Paste.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Redo.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Save.png" />
+    <Image Include="resources\PNG\VistaICO_Toolbar_Icons\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="images\in1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dev701QtNSPlatformBase.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

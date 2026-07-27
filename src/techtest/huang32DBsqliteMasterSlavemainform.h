@@ -1,0 +1,55 @@
+#ifndef MAINFORM_H
+#define MAINFORM_H
+
+#include <QWidget>
+
+class QDialogButtonBox;
+class QLabel;
+class QModelIndex;
+class QPushButton;
+class QSplitter;
+class QSqlRelationalTableModel;
+class QTableView;
+
+enum {
+    Department_Id = 0,
+    Department_Name = 1,
+    Department_LocationId = 2
+};
+
+class MasterSlaveDBSqliteMainForm : public QWidget
+{
+    Q_OBJECT
+
+public:
+    MasterSlaveDBSqliteMainForm(QWidget *parent=0);
+
+private slots:
+    void updateEmployeeView();
+    void addDepartment();
+    void deleteDepartment();
+    void editEmployees();
+
+private:
+    void createDepartmentPanel();
+    void createEmployeePanel();
+
+    QSqlRelationalTableModel *departmentModel;
+    QSqlRelationalTableModel *employeeModel;
+    QWidget *departmentPanel;
+    QWidget *employeePanel;
+    QLabel *departmentLabel;
+    QLabel *employeeLabel;
+    QTableView *departmentView;
+    QTableView *employeeView;
+    QSplitter *splitter;
+    QPushButton *addButton;
+    QPushButton *deleteButton;
+    QPushButton *editButton;
+    QPushButton *quitButton;
+    QDialogButtonBox *buttonBox;
+};
+
+void initMasterSlaveDBSqlite();
+
+#endif

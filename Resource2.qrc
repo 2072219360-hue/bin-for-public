@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>binForPublic/images/setViewDirectionToNegativeX.png</file>
+        <file>binForPublic/images/setViewDirectionToNegativeY.png</file>
+        <file>binForPublic/images/setViewDirectionToNegativeZ.png</file>
+        <file>binForPublic/images/setViewDirectionToX.png</file>
+        <file>binForPublic/images/setViewDirectionToY.png</file>
+        <file>binForPublic/images/setViewDirectionToZ.png</file>
+        <file>binForPublic/images/zoomin.png</file>
+        <file>binForPublic/images/zoomout.png</file>
+        <file>binForPublic/images/表面模式.png</file>
+        <file>binForPublic/images/轮廓模式.png</file>
+        <file>binForPublic/images/散点模式.png</file>
+        <file>binForPublic/images/属性.png</file>
+        <file>binForPublic/images/网格模式.png</file>
+        <file>binForPublic/images/网面模式.png</file>
+        <file>binForPublic/images/显示图例.png</file>
+        <file>binForPublic/images/隐藏图例.png</file>
+        <file>binForPublic/images/云图模式.png</file>
+        <file>binForPublic/images/gridl.png</file>
+        <file>binForPublic/images/gridr.png</file>
+        <file>binForPublic/images/save.png</file>
+        <file>binForPublic/images/SSPNS/fileopen.png</file>
+    </qresource>
+</RCC>

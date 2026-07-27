@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/new.png</file>
+        <file>images/print.png</file>
+        <file>images/save.png</file>
+        <file>images/undo.png</file>
+        <file>images/default.png</file>
+        <file>images/default.ico</file>
+        <file>images/splash.jpg</file>
+        <file>images/bg.jpg</file>
+        <file>images/option.png</file>
+        <file>images/zoomin.png</file>
+        <file>images/zoomout.png</file>
+        <file>images/in1.txt</file>
+        <file>images/clusterMPIEnv.png</file>
+        <file>images/singleMPIenv.png</file>
+        <file>images/Exit.png</file>
+        <file>images/2Dpost.png</file>
+        <file>images/3Dpost.png</file>
+        <file>images/gridpre.png</file>
+        <file>images/gridInsp.png</file>
+        <file>images/runParam.png</file>
+        <file>images/basedata.png</file>
+        <file>images/singleMPIrun.png</file>
+        <file>images/clusterMPIrun.png</file>
+        <file>images/runBrowser.png</file>
+        <file>images/resultBrowser.png</file>
+        <file>images/showinsp.png</file>
+        <file>images/EditInsp.png</file>
+        <file>images/SaveInsp.png</file>
+        <file>qt_zh_CN.qm</file>
+        <file>images/SSPNS/filemanager.png</file>
+        <file>images/SSPNS/filemanager_down.png</file>
+        <file>images/scrollbar_down_normal.gft.png</file>
+        <file>images/scrollbar_top_normal.gft.png</file>
+        <file>images/SSPNS/fileopen.png</file>
+        <file>images/SSPNS/fileopen_hover.png</file>
+        <file>images/SSPNS/fileopen_press.png</file>
+        <file>src/images/setViewDirectionToNegativeX.png</file>
+        <file>src/images/setViewDirectionToNegativeY.png</file>
+        <file>src/images/setViewDirectionToNegativeZ.png</file>
+        <file>src/images/setViewDirectionToX.png</file>
+        <file>src/images/setViewDirectionToY.png</file>
+        <file>src/images/setViewDirectionToZ.png</file>
+    </qresource>
+</RCC>
