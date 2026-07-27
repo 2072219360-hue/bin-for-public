@@ -1,0 +1,30 @@
+<RCC>
+    <!--
+      CMake-only repair for Resource2.qrc. The legacy file points into the
+      excluded binForPublic tree; aliases preserve its original resource URLs
+      while inputs come from the source-controlled images directory.
+    -->
+    <qresource prefix="/binForPublic/images">
+        <file alias="setViewDirectionToNegativeX.png">../images/setViewDirectionToNegativeX.png</file>
+        <file alias="setViewDirectionToNegativeY.png">../images/setViewDirectionToNegativeY.png</file>
+        <file alias="setViewDirectionToNegativeZ.png">../images/setViewDirectionToNegativeZ.png</file>
+        <file alias="setViewDirectionToX.png">../images/setViewDirectionToX.png</file>
+        <file alias="setViewDirectionToY.png">../images/setViewDirectionToY.png</file>
+        <file alias="setViewDirectionToZ.png">../images/setViewDirectionToZ.png</file>
+        <file alias="zoomin.png">../images/zoomin.png</file>
+        <file alias="zoomout.png">../images/zoomout.png</file>
+        <file alias="表面模式.png">../images/表面模式.png</file>
+        <file alias="轮廓模式.png">../images/轮廓模式.png</file>
+        <file alias="散点模式.png">../images/散点模式.png</file>
+        <file alias="属性.png">../images/属性.png</file>
+        <file alias="网格模式.png">../images/网格模式.png</file>
+        <file alias="网面模式.png">../images/网面模式.png</file>
+        <file alias="显示图例.png">../images/显示图例.png</file>
+        <file alias="隐藏图例.png">../images/隐藏图例.png</file>
+        <file alias="云图模式.png">../images/云图模式.png</file>
+        <file alias="gridl.png">../images/gridl.png</file>
+        <file alias="gridr.png">../images/gridr.png</file>
+        <file alias="save.png">../images/save.png</file>
+        <file alias="SSPNS/fileopen.png">../images/SSPNS/fileopen.png</file>
+    </qresource>
+</RCC>

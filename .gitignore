@@ -1,5 +1,7 @@
 # Build and editor output
 /build/
+/out/
+/CMakeUserPresets.json
 /binForPublic/
 /x64/
 /generated/

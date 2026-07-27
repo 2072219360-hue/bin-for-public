@@ -16,6 +16,12 @@ legacy `binForPublic` runtime bundle are deliberately excluded.
 The exact project dependencies and preparation steps are described in
 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).
 
+An additive, Debug-x64-only CMake migration is documented in
+[`docs/CMAKE_BUILD.md`](docs/CMAKE_BUILD.md). It intentionally leaves the
+legacy Visual Studio and qmake build files unchanged. The frozen dependency
+contract and known binary limitations are in
+[`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md).
+
 ## Quick start
 
 From PowerShell in a fresh clone:
