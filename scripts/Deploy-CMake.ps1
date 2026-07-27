@@ -60,7 +60,7 @@ $missingRuntimeDlls = @(Get-Dev701MissingRuntimeDlls @($runtimeRoot))
 if ($missingRuntimeDlls.Count -gt 0) {
     throw "Deployment is incomplete; missing x64 DLLs: $($missingRuntimeDlls -join ', ')"
 }
-$qwindows = Join-Path $runtimeRoot "platforms\qwindows.dll"
+$qwindows = Join-Path $runtimeRoot "platforms\qwindowsd.dll"
 if (-not (Test-Dev701PeX64 $qwindows)) {
     throw "Deployment is incomplete; Qt x64 platform plugin is missing: $qwindows"
 }

@@ -18,7 +18,9 @@ if (-not $vtkConfig) { throw "VTKConfig.cmake was not found below $VtkRoot" }
 
 Push-Location $repoRoot
 try {
-    & cmake --preset vs2017-x64-debug `
+    $buildDir = Join-Path $repoRoot "out\\build\\vs2017-x64-debug"
+    & cmake -S $repoRoot -B $buildDir -G Ninja `
+        "-DCMAKE_BUILD_TYPE=Debug" `
         "-DQt5_DIR=$qtConfig" `
         "-DVTK_DIR=$($vtkConfig.Directory.FullName)"
     if ($LASTEXITCODE -ne 0) { throw "CMake configuration failed." }

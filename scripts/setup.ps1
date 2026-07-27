@@ -55,6 +55,7 @@ function Find-RuntimePaths {
     $candidates = @($existingConfig.additionalRuntimePath, $env:DEV701_RUNTIME_ROOT)
     $candidates += @(
         (Join-Path $repoRoot "binForPublic"),
+        (Join-Path $repoRoot "deps\\runtime\\Debug"),
         (Join-Path $repoRoot "runtime"),
         (Join-Path $repoRoot "lib")
     )

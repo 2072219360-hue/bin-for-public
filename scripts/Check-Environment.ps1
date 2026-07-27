@@ -62,6 +62,10 @@ Write-Check ($null -ne $vswhere) "Visual Studio locator" $(if ($vswhere) { $vswh
 $vsRoot = $null
 if ($vswhere) {
     $vsRoot = & $vswhere -version "[15.0,16.0)" -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
+    if ([string]::IsNullOrWhiteSpace($vsRoot)) {
+        $fallback = Join-Path ${env:ProgramFiles(x86)} "Microsoft Visual Studio\2017\Community"
+        if (Test-Path (Join-Path $fallback "VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe")) { $vsRoot = $fallback }
+    }
 }
 Write-Check (-not [string]::IsNullOrWhiteSpace($vsRoot)) "Visual Studio 2017 + MSVC v141 x64" $(if ($vsRoot) { $vsRoot } else { "VS2017 with the v141 x64 toolset not installed" })
 

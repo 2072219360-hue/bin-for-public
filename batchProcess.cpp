@@ -45,7 +45,7 @@ namespace platforms {
 
 			QString batch_config_file = SignalInstance::getInstance()->getWorkSpace() + "/Batch/batchConfig.json";
 			auto lpwstr = stringToLPCWSTR(batch_config_file.toLocal8Bit().toStdString());
-			hFile = CreateFile(
+			hFile = CreateFileW(
 				lpwstr,          // 文件名
 				GENERIC_READ | GENERIC_WRITE,            // 访问模式
 				FILE_SHARE_READ,                       // 共享模式
