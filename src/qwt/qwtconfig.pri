@@ -1,0 +1,4 @@
+QWT_CONFIG += QwtDll
+QWT_CONFIG += QwtSvg
+QWT_CONFIG += QwtOpenGL
+QWT_CONFIG += QwtMathML

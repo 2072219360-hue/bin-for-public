@@ -10,7 +10,7 @@ INCLUDEPATH       = include
 DEPENDPATH        = include src
 DESTDIR      			= lib
 #DESTDIR      			= ../../../lib
-QT += opengl
+QT += widgets opengl
 
 #win32:TEMPLATE    = vclib
 win32:CONFIG     += dll exceptions
@@ -93,3 +93,5 @@ zlib {
   win32:LIBS += zlib.lib
 	unix:LIBS  += -lz
 }
+SOURCES += src/qwt3d_io_gl2ps.cpp 3rdparty/gl2ps/gl2ps.c
+LIBS += opengl32.lib glu32.lib

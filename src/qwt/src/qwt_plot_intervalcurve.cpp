@@ -7,6 +7,7 @@
  * modify it under the terms of the Qwt License, Version 1.0
  *****************************************************************************/
 
+#include <cstring>
 #include "qwt_plot_intervalcurve.h"
 #include "qwt_interval_symbol.h"
 #include "qwt_scale_map.h"
@@ -411,12 +412,12 @@ void QwtPlotIntervalCurve::drawTube( QPainter *painter,
             QPolygonF p;
 
             p.resize( size );
-            qMemCopy( p.data(), points, size * sizeof( QPointF ) );
+            memcpy( p.data(), points, size * sizeof( QPointF ) );
             p = QwtClipper::clipPolygonF( canvasRect, p );
             QwtPainter::drawPolyline( painter, p );
 
             p.resize( size );
-            qMemCopy( p.data(), points + size, size * sizeof( QPointF ) );
+            memcpy( p.data(), points + size, size * sizeof( QPointF ) );
             p = QwtClipper::clipPolygonF( canvasRect, p );
             QwtPainter::drawPolyline( painter, p );
         }

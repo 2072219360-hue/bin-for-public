@@ -197,7 +197,7 @@ the associated documentation.
 
 If the \p shareWidget parameter points to a valid \c QGLWidget, the QGLViewer will share the OpenGL
 context with \p shareWidget (see isSharing()). */
-QGLViewer::QGLViewer(QWidget* parent, const QGLWidget* shareWidget, Qt::WFlags flags)
+QGLViewer::QGLViewer(QWidget* parent, const QGLWidget* shareWidget, Qt::WindowFlags flags)
 : QGLWidget(parent, shareWidget, flags)
 { defaultConstructor(); }
 
@@ -206,7 +206,7 @@ with \c QGLContext sub-classes (use \p shareWidget otherwise).
 
 \note This constructor is correctly working only with Qt versions greater or equal than 3.2. The
 provided \p context is simply ignored otherwise. */
-QGLViewer::QGLViewer(QGLContext *context, QWidget* parent, const QGLWidget* shareWidget, Qt::WFlags flags)
+QGLViewer::QGLViewer(QGLContext *context, QWidget* parent, const QGLWidget* shareWidget, Qt::WindowFlags flags)
 : QGLWidget(context, parent, shareWidget, flags)
 { defaultConstructor(); }
 
@@ -214,7 +214,7 @@ QGLViewer::QGLViewer(QGLContext *context, QWidget* parent, const QGLWidget* shar
 
 This is for instance needed to ask for a stencil buffer or for stereo display (as is illustrated in
 the <a href="../examples/stereoViewer.html">stereoViewer example</a>). */
-QGLViewer::QGLViewer(const QGLFormat& format, QWidget* parent, const QGLWidget* shareWidget, Qt::WFlags flags)
+QGLViewer::QGLViewer(const QGLFormat& format, QWidget* parent, const QGLWidget* shareWidget, Qt::WindowFlags flags)
 : QGLWidget(format, parent, shareWidget, flags)
 { defaultConstructor(); }
 #endif
@@ -1870,7 +1870,7 @@ static QString keyboardModifiersString(QtKeyboardModifiers m, bool noButton=fals
 #if QT_VERSION >= 0x040000
 		return QKeySequence(keySequence+"X").toString(QKeySequence::NativeText).replace("X", "");
 #else
-		return QString(QKeySequence(keySequence+"X")).replace("X", "");
+		return QKeySequence(keySequence+"X").toString().replace("X", "");
 #endif
 	else
 		return QString();
@@ -2140,10 +2140,10 @@ void QGLViewer::setKeyDescription(int key, QString description)
 static QString keyString(int key)
 {
 #if QT_VERSION >= 0x030000
-	return QString(QKeySequence(convertToShortModifier(key)));
+	return QKeySequence(convertToShortModifier(key)).toString();
 #else
 	// #CONNECTION# setKeyDescription. In Qt 2.3, longs modifier overlap with key codes.
-	return QString(QKeySequence(key));
+	return QKeySequence(key).toString();
 #endif
 }
 
