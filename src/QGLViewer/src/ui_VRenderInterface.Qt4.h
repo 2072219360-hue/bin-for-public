@@ -11,18 +11,18 @@
 #define UI_VRENDERINTERFACE_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QComboBox>
-#include <QtGui/QDialog>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
@@ -135,43 +135,43 @@ public:
 
     void retranslateUi(QDialog *VRenderInterface)
     {
-        VRenderInterface->setWindowTitle(QApplication::translate("VRenderInterface", "Vectorial rendering options", 0, QApplication::UnicodeUTF8));
+        VRenderInterface->setWindowTitle(QCoreApplication::translate("VRenderInterface", "Vectorial rendering options", 0));
 #ifndef QT_NO_TOOLTIP
-        includeHidden->setToolTip(QApplication::translate("VRenderInterface", "Hidden polygons are also included in the output (usually twice bigger)", 0, QApplication::UnicodeUTF8));
+        includeHidden->setToolTip(QCoreApplication::translate("VRenderInterface", "Hidden polygons are also included in the output (usually twice bigger)", 0));
 #endif // QT_NO_TOOLTIP
-        includeHidden->setText(QApplication::translate("VRenderInterface", "Include hidden parts", 0, QApplication::UnicodeUTF8));
+        includeHidden->setText(QCoreApplication::translate("VRenderInterface", "Include hidden parts", 0));
 #ifndef QT_NO_TOOLTIP
-        cullBackFaces->setToolTip(QApplication::translate("VRenderInterface", "Back faces (non clockwise point ordering) are removed from the output", 0, QApplication::UnicodeUTF8));
+        cullBackFaces->setToolTip(QCoreApplication::translate("VRenderInterface", "Back faces (non clockwise point ordering) are removed from the output", 0));
 #endif // QT_NO_TOOLTIP
-        cullBackFaces->setText(QApplication::translate("VRenderInterface", "Cull back faces", 0, QApplication::UnicodeUTF8));
+        cullBackFaces->setText(QCoreApplication::translate("VRenderInterface", "Cull back faces", 0));
 #ifndef QT_NO_TOOLTIP
-        blackAndWhite->setToolTip(QApplication::translate("VRenderInterface", "Black and white rendering", 0, QApplication::UnicodeUTF8));
+        blackAndWhite->setToolTip(QCoreApplication::translate("VRenderInterface", "Black and white rendering", 0));
 #endif // QT_NO_TOOLTIP
-        blackAndWhite->setText(QApplication::translate("VRenderInterface", "Black and white", 0, QApplication::UnicodeUTF8));
+        blackAndWhite->setText(QCoreApplication::translate("VRenderInterface", "Black and white", 0));
 #ifndef QT_NO_TOOLTIP
-        colorBackground->setToolTip(QApplication::translate("VRenderInterface", "Use current background color instead of white", 0, QApplication::UnicodeUTF8));
+        colorBackground->setToolTip(QCoreApplication::translate("VRenderInterface", "Use current background color instead of white", 0));
 #endif // QT_NO_TOOLTIP
-        colorBackground->setText(QApplication::translate("VRenderInterface", "Color background", 0, QApplication::UnicodeUTF8));
+        colorBackground->setText(QCoreApplication::translate("VRenderInterface", "Color background", 0));
 #ifndef QT_NO_TOOLTIP
-        tightenBBox->setToolTip(QApplication::translate("VRenderInterface", "Fit output bounding box to current display", 0, QApplication::UnicodeUTF8));
+        tightenBBox->setToolTip(QCoreApplication::translate("VRenderInterface", "Fit output bounding box to current display", 0));
 #endif // QT_NO_TOOLTIP
-        tightenBBox->setText(QApplication::translate("VRenderInterface", "Tighten bounding box", 0, QApplication::UnicodeUTF8));
+        tightenBBox->setText(QCoreApplication::translate("VRenderInterface", "Tighten bounding box", 0));
 #ifndef QT_NO_TOOLTIP
-        sortLabel->setToolTip(QApplication::translate("VRenderInterface", "Polygon depth sorting method", 0, QApplication::UnicodeUTF8));
+        sortLabel->setToolTip(QCoreApplication::translate("VRenderInterface", "Polygon depth sorting method", 0));
 #endif // QT_NO_TOOLTIP
-        sortLabel->setText(QApplication::translate("VRenderInterface", "Sort method:", 0, QApplication::UnicodeUTF8));
+        sortLabel->setText(QCoreApplication::translate("VRenderInterface", "Sort method:", 0));
         sortMethod->clear();
         sortMethod->insertItems(0, QStringList()
-         << QApplication::translate("VRenderInterface", "No sorting", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("VRenderInterface", "BSP", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("VRenderInterface", "Topological", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("VRenderInterface", "Advanced topological", 0, QApplication::UnicodeUTF8)
+         << QCoreApplication::translate("VRenderInterface", "No sorting", 0)
+         << QCoreApplication::translate("VRenderInterface", "BSP", 0)
+         << QCoreApplication::translate("VRenderInterface", "Topological", 0)
+         << QCoreApplication::translate("VRenderInterface", "Advanced topological", 0)
         );
 #ifndef QT_NO_TOOLTIP
-        sortMethod->setToolTip(QApplication::translate("VRenderInterface", "Polygon depth sorting method", 0, QApplication::UnicodeUTF8));
+        sortMethod->setToolTip(QCoreApplication::translate("VRenderInterface", "Polygon depth sorting method", 0));
 #endif // QT_NO_TOOLTIP
-        SaveButton->setText(QApplication::translate("VRenderInterface", "Save", 0, QApplication::UnicodeUTF8));
-        CancelButton->setText(QApplication::translate("VRenderInterface", "Cancel", 0, QApplication::UnicodeUTF8));
+        SaveButton->setText(QCoreApplication::translate("VRenderInterface", "Save", 0));
+        CancelButton->setText(QCoreApplication::translate("VRenderInterface", "Cancel", 0));
     } // retranslateUi
 
 };

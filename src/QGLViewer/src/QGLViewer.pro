@@ -12,6 +12,8 @@ TEMPLATE = lib
 TARGET = QGLViewer
 VERSION = 2.3.17
 CONFIG *= qt opengl warn_on shared thread create_prl rtti no_keywords
+QT += widgets xml opengl
+LIBS += opengl32.lib glu32.lib
 INCLUDEPATH+=$$PWD\include
 QGL_HEADERS = qglviewer.h \
 	  camera.h \
@@ -79,36 +81,36 @@ contains( DEFINES, NO_VECTORIAL_RENDER ) {
   }
 
   SOURCES *= \
-	VRender/BackFaceCullingOptimizer.cpp \
-	VRender/BSPSortMethod.cpp \
-	VRender/EPSExporter.cpp \
-	VRender/Exporter.cpp \
-	VRender/FIGExporter.cpp \
-	VRender/gpc.cpp \
-	VRender/ParserGL.cpp \
-	VRender/Primitive.cpp \
-	VRender/PrimitivePositioning.cpp \
-	VRender/TopologicalSortMethod.cpp \
-	VRender/VisibilityOptimizer.cpp \
-	VRender/Vector2.cpp \
-	VRender/Vector3.cpp \
-	VRender/NVector3.cpp \
-	VRender/VRender.cpp
+	../include/VRender/BackFaceCullingOptimizer.cpp \
+	../include/VRender/BSPSortMethod.cpp \
+	../include/VRender/EPSExporter.cpp \
+	../include/VRender/Exporter.cpp \
+	../include/VRender/FIGExporter.cpp \
+	../include/VRender/gpc.cpp \
+	../include/VRender/ParserGL.cpp \
+	../include/VRender/Primitive.cpp \
+	../include/VRender/PrimitivePositioning.cpp \
+	../include/VRender/TopologicalSortMethod.cpp \
+	../include/VRender/VisibilityOptimizer.cpp \
+	../include/VRender/Vector2.cpp \
+	../include/VRender/Vector3.cpp \
+	../include/VRender/NVector3.cpp \
+	../include/VRender/VRender.cpp
 
   VRENDER_HEADERS = \
-	VRender/AxisAlignedBox.h \
-	VRender/Exporter.h \
-	VRender/gpc.h \
-	VRender/NVector3.h \
-	VRender/Optimizer.h \
-	VRender/ParserGL.h \
-	VRender/Primitive.h \
-	VRender/PrimitivePositioning.h \
-	VRender/SortMethod.h \
-	VRender/Types.h \
-	VRender/Vector2.h \
-	VRender/Vector3.h \
-	VRender/VRender.h
+	../include/VRender/AxisAlignedBox.h \
+	../include/VRender/Exporter.h \
+	../include/VRender/gpc.h \
+	../include/VRender/NVector3.h \
+	../include/VRender/Optimizer.h \
+	../include/VRender/ParserGL.h \
+	../include/VRender/Primitive.h \
+	../include/VRender/PrimitivePositioning.h \
+	../include/VRender/SortMethod.h \
+	../include/VRender/Types.h \
+	../include/VRender/Vector2.h \
+	../include/VRender/Vector3.h \
+	../include/VRender/VRender.h
 
   HEADERS *= $${VRENDER_HEADERS}
 }
@@ -312,3 +314,6 @@ contains( QT_VERSION, "^4.*" ) {
      else: TARGET = $$join(TARGET,,,d)
    }
 }
+
+INCLUDEPATH += $$PWD/../include
+FORMS = ImageInterface.Qt4.ui VRenderInterface.Qt4.ui

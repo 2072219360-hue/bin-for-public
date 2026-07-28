@@ -11,19 +11,19 @@
 #define UI_IMAGEINTERFACE_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QCheckBox>
-#include <QtGui/QDialog>
-#include <QtGui/QDoubleSpinBox>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QSpinBox>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
@@ -208,36 +208,36 @@ public:
 
     void retranslateUi(QDialog *ImageInterface)
     {
-        ImageInterface->setWindowTitle(QApplication::translate("ImageInterface", "Image settings", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("ImageInterface", "Width", 0, QApplication::UnicodeUTF8));
+        ImageInterface->setWindowTitle(QCoreApplication::translate("ImageInterface", "Image settings", 0));
+        label_2->setText(QCoreApplication::translate("ImageInterface", "Width", 0));
 #ifndef QT_NO_TOOLTIP
-        imgWidth->setToolTip(QApplication::translate("ImageInterface", "Width of the image (in pixels)", 0, QApplication::UnicodeUTF8));
+        imgWidth->setToolTip(QCoreApplication::translate("ImageInterface", "Width of the image (in pixels)", 0));
 #endif // QT_NO_TOOLTIP
-        imgWidth->setSuffix(QApplication::translate("ImageInterface", " px", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("ImageInterface", "Height", 0, QApplication::UnicodeUTF8));
+        imgWidth->setSuffix(QCoreApplication::translate("ImageInterface", " px", 0));
+        label_3->setText(QCoreApplication::translate("ImageInterface", "Height", 0));
 #ifndef QT_NO_TOOLTIP
-        imgHeight->setToolTip(QApplication::translate("ImageInterface", "Height of the image (in pixels)", 0, QApplication::UnicodeUTF8));
+        imgHeight->setToolTip(QCoreApplication::translate("ImageInterface", "Height of the image (in pixels)", 0));
 #endif // QT_NO_TOOLTIP
-        imgHeight->setSuffix(QApplication::translate("ImageInterface", " px", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("ImageInterface", "Image quality", 0, QApplication::UnicodeUTF8));
+        imgHeight->setSuffix(QCoreApplication::translate("ImageInterface", " px", 0));
+        label_4->setText(QCoreApplication::translate("ImageInterface", "Image quality", 0));
 #ifndef QT_NO_TOOLTIP
-        imgQuality->setToolTip(QApplication::translate("ImageInterface", "Between 0 (smallest files) and 100 (highest quality)", 0, QApplication::UnicodeUTF8));
+        imgQuality->setToolTip(QCoreApplication::translate("ImageInterface", "Between 0 (smallest files) and 100 (highest quality)", 0));
 #endif // QT_NO_TOOLTIP
-        label->setText(QApplication::translate("ImageInterface", "Oversampling", 0, QApplication::UnicodeUTF8));
+        label->setText(QCoreApplication::translate("ImageInterface", "Oversampling", 0));
 #ifndef QT_NO_TOOLTIP
-        oversampling->setToolTip(QApplication::translate("ImageInterface", "Antialiases image (when larger then 1.0)", 0, QApplication::UnicodeUTF8));
+        oversampling->setToolTip(QCoreApplication::translate("ImageInterface", "Antialiases image (when larger then 1.0)", 0));
 #endif // QT_NO_TOOLTIP
-        oversampling->setPrefix(QApplication::translate("ImageInterface", "x ", 0, QApplication::UnicodeUTF8));
+        oversampling->setPrefix(QCoreApplication::translate("ImageInterface", "x ", 0));
 #ifndef QT_NO_TOOLTIP
-        whiteBackground->setToolTip(QApplication::translate("ImageInterface", "Use white as background color", 0, QApplication::UnicodeUTF8));
+        whiteBackground->setToolTip(QCoreApplication::translate("ImageInterface", "Use white as background color", 0));
 #endif // QT_NO_TOOLTIP
-        whiteBackground->setText(QApplication::translate("ImageInterface", "Use white background", 0, QApplication::UnicodeUTF8));
+        whiteBackground->setText(QCoreApplication::translate("ImageInterface", "Use white background", 0));
 #ifndef QT_NO_TOOLTIP
-        expandFrustum->setToolTip(QApplication::translate("ImageInterface", "When image aspect ratio differs from viewer's one, expand frustum as needed. Fits inside current frustum otherwise.", 0, QApplication::UnicodeUTF8));
+        expandFrustum->setToolTip(QCoreApplication::translate("ImageInterface", "When image aspect ratio differs from viewer's one, expand frustum as needed. Fits inside current frustum otherwise.", 0));
 #endif // QT_NO_TOOLTIP
-        expandFrustum->setText(QApplication::translate("ImageInterface", "Expand frustum if needed", 0, QApplication::UnicodeUTF8));
-        okButton->setText(QApplication::translate("ImageInterface", "OK", 0, QApplication::UnicodeUTF8));
-        cancelButton->setText(QApplication::translate("ImageInterface", "Cancel", 0, QApplication::UnicodeUTF8));
+        expandFrustum->setText(QCoreApplication::translate("ImageInterface", "Expand frustum if needed", 0));
+        okButton->setText(QCoreApplication::translate("ImageInterface", "OK", 0));
+        cancelButton->setText(QCoreApplication::translate("ImageInterface", "Cancel", 0));
     } // retranslateUi
 
 };

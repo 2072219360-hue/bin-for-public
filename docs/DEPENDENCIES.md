@@ -7,7 +7,7 @@ existing known-good environment; it does not upgrade or replace dependencies.
 | --- | --- | --- |
 | Operating system | Windows 10 or later | x64 |
 | Visual Studio | Visual Studio 2017 | MSVC v141 x64, `/MDd` |
-| CMake | 3.21 or later | Visual Studio 15 2017 generator |
+| CMake | 3.18 or later | Ninja generator with the VS2017 x64 developer environment |
 | Qt | 5.14.1 `win64_msvc2017_64` | Debug libraries, Qt Charts installed |
 | VTK | 8.2.0 | x64 Debug, shared, Qt 5 and OpenGL2 enabled |
 | Qwt | 6.0.1 source snapshot | existing Debug x64 import library initially used |

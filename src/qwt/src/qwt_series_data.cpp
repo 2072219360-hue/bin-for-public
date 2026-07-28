@@ -7,6 +7,7 @@
  * modify it under the terms of the Qwt License, Version 1.0
  *****************************************************************************/
 
+#include <cstring>
 #include "qwt_series_data.h"
 #include "qwt_math.h"
 
@@ -323,10 +324,10 @@ QwtPointArrayData::QwtPointArrayData( const double *x,
         const double *y, size_t size )
 {
     d_x.resize( size );
-    qMemCopy( d_x.data(), x, size * sizeof( double ) );
+    memcpy( d_x.data(), x, size * sizeof( double ) );
 
     d_y.resize( size );
-    qMemCopy( d_y.data(), y, size * sizeof( double ) );
+    memcpy( d_y.data(), y, size * sizeof( double ) );
 }
 
 /*!

@@ -7,6 +7,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+. (Join-Path $PSScriptRoot "Vs2017-Environment.ps1")
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $failed = $false
 
@@ -57,35 +58,44 @@ Write-Host "Dev701 conservative CMake environment check"
 Write-Host "Repository: $repoRoot"
 
 $vswhere = Find-VsWhere
-Write-Check ($null -ne $vswhere) "Visual Studio locator" $(if ($vswhere) { $vswhere } else { "vswhere.exe not found" })
-
-$vsRoot = $null
-if ($vswhere) {
-    $vsRoot = & $vswhere -version "[15.0,16.0)" -products * -requires Microsoft.VisualStudio.Component.VC.v141.x86.x64 -property installationPath
-    if ([string]::IsNullOrWhiteSpace($vsRoot)) {
-        $fallback = Join-Path ${env:ProgramFiles(x86)} "Microsoft Visual Studio\2017\Community"
-        if (Test-Path (Join-Path $fallback "VC\Tools\MSVC\14.16.27023\bin\Hostx64\x64\cl.exe")) { $vsRoot = $fallback }
-    }
+$vsEnvironment = $null
+try {
+    $vsEnvironment = Enter-Dev701Vs2017Environment
+    Write-Check $true "VS2017 x64 compiler environment" "$($vsEnvironment.Compiler); <string>: $($vsEnvironment.StringHeader); <windows.h>: $($vsEnvironment.WindowsHeader)"
+    Test-Dev701Vs2017Toolchain
+    Write-Check $true "VS2017 clean compile/link probe" "C++ standard library and Windows SDK are usable"
+} catch {
+    Write-Check $false "VS2017 x64 compiler environment" $_.Exception.Message
 }
-Write-Check (-not [string]::IsNullOrWhiteSpace($vsRoot)) "Visual Studio 2017 + MSVC v141 x64" $(if ($vsRoot) { $vsRoot } else { "VS2017 with the v141 x64 toolset not installed" })
 
 $cmake = Get-Command cmake -ErrorAction SilentlyContinue
 Write-Check ($null -ne $cmake) "CMake" $(if ($cmake) { (& cmake --version | Select-Object -First 1) } else { "cmake not on PATH" })
 if ($cmake) {
-    $cmakeHelp = (& cmake --help | Out-String)
-    Write-Check ($cmakeHelp -match "Visual Studio 15 2017") "CMake VS2017 generator" "Visual Studio 15 2017"
+    try {
+        $cmakeVersionText = (& cmake --version | Select-Object -First 1)
+        $cmakeVersion = [version](($cmakeVersionText -replace '^cmake version\s+', '').Trim())
+        Write-Check ($cmakeVersion -ge [version]"3.18") "CMake minimum version" "$cmakeVersion (required: 3.18+)"
+    } catch {
+        Write-Check $false "CMake version" $_.Exception.Message
+    }
 }
+$ninja = Get-Command ninja.exe -ErrorAction SilentlyContinue
+Write-Check ($null -ne $ninja) "Ninja" $(if ($ninja) { "$($ninja.Source) ($(& $ninja.Source --version))" } else { "ninja.exe not on PATH" })
 
 $qmake = Join-Path $QtRoot "bin\qmake.exe"
 $qtVersion = if (Test-Path $qmake) { (& $qmake -query QT_VERSION) } else { "missing" }
 Write-Check ((Test-Path $qmake) -and $qtVersion -eq "5.14.1") "Qt 5.14.1" "$qmake (version $qtVersion)"
 Write-Check (Test-Path (Join-Path $QtRoot "lib\Qt5Chartsd.lib")) "Qt Charts Debug" (Join-Path $QtRoot "lib\Qt5Chartsd.lib")
 Write-Check (Test-Path (Join-Path $QtRoot "lib\cmake\Qt5\Qt5Config.cmake")) "Qt CMake package" (Join-Path $QtRoot "lib\cmake\Qt5")
+Write-Check (Test-PeX64 (Join-Path $QtRoot "bin\Qt5Cored.dll")) "Qt Core x64 Debug DLL" (Join-Path $QtRoot "bin\Qt5Cored.dll")
+Write-Check (Test-Path (Join-Path $QtRoot "bin\windeployqt.exe")) "Qt deployment tool" (Join-Path $QtRoot "bin\windeployqt.exe")
 
 $vtkConfig = Get-ChildItem $VtkRoot -Filter VTKConfig.cmake -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
 Write-Check ($null -ne $vtkConfig) "VTK 8.2 CMake package" $(if ($vtkConfig) { $vtkConfig.FullName } else { "VTKConfig.cmake not found below $VtkRoot" })
 Write-Check (Test-Path (Join-Path $VtkRoot "include\vtk-8.2\vtkVersion.h")) "VTK 8.2 headers" (Join-Path $VtkRoot "include\vtk-8.2")
 Write-Check (Test-Path (Join-Path $VtkRoot "lib\vtkCommonCore-8.2.lib")) "VTK Debug libraries" (Join-Path $VtkRoot "lib\vtkCommonCore-8.2.lib")
+$vtkCoreDll = Get-ChildItem (Join-Path $VtkRoot "bin") -Filter "vtkCommonCore-8.2*.dll" -File -ErrorAction SilentlyContinue | Select-Object -First 1
+Write-Check ($null -ne $vtkCoreDll -and (Test-PeX64 $vtkCoreDll.FullName)) "VTK Core x64 DLL" $(if ($vtkCoreDll) { $vtkCoreDll.FullName } else { "vtkCommonCore-8.2 DLL not found" })
 
 $importLibraries = @(
     "lib\huangqwtd.lib",
@@ -100,7 +110,8 @@ foreach ($relative in $importLibraries) {
     Write-Check (Test-Path $path) "Project import library" $relative
 }
 
-$dumpbin = Find-Dumpbin $vswhere
+$dumpbinCommand = Get-Command dumpbin.exe -ErrorAction SilentlyContinue
+$dumpbin = if ($dumpbinCommand) { $dumpbinCommand.Source } else { Find-Dumpbin $vswhere }
 if ($dumpbin) {
     foreach ($relative in $importLibraries) {
         $path = Join-Path $repoRoot $relative
