@@ -10,6 +10,7 @@ The first milestone supports only:
 
 - Windows x64
 - Visual Studio 2017 / MSVC v141
+- Ninja available on `PATH`
 - Debug
 - Qt 5.14.1 `msvc2017_64`
 - VTK 8.2.0 built against the same Qt installation
@@ -52,6 +53,10 @@ After setup, daily commands have no path arguments:
 additional dependency DLLs, and source-controlled runtime data into
 `out\runtime\Debug`. `run.ps1` starts that isolated runtime.
 It does not add Qt or VTK installation directories to `PATH`.
+
+The scripts automatically load `vcvars64.bat` before invoking CMake/Ninja.
+They verify `cl.exe`, `INCLUDE`, `LIB`, and the standard C++ header `<string>`,
+so a clean build does not depend on a previously opened Developer PowerShell.
 
 When an additional runtime directory contains legacy runtime-data folders
 (`help`, `newtemplate`, `mpisupport`, `pyengine`, `pltDemo`, or `ui`), they are
@@ -117,3 +122,11 @@ Run the steps separately and retain the complete output. Their meanings are:
 
 The legacy build should also be run before and after validation. A CMake change
 is not accepted if it breaks the existing build path.
+
+Clean-build validation removes only generated output, then rebuilds everything:
+
+```powershell
+Remove-Item .\out -Recurse -Force
+.\scripts\build.ps1
+.\scripts\run.ps1
+```
