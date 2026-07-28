@@ -16,20 +16,40 @@ legacy `binForPublic` runtime bundle are deliberately excluded.
 The exact project dependencies and preparation steps are described in
 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).
 
+An additive, Debug-x64-only CMake migration is documented in
+[`docs/CMAKE_BUILD.md`](docs/CMAKE_BUILD.md). It intentionally leaves the
+legacy Visual Studio and qmake build files unchanged. The frozen dependency
+contract and known binary limitations are in
+[`docs/DEPENDENCIES.md`](docs/DEPENDENCIES.md).
+
+For the new path, run `scripts\setup.ps1` once, then use the zero-argument
+`scripts\build.ps1` and `scripts\run.ps1` commands.
+
 ## Quick start
 
-From PowerShell in a fresh clone:
+In PowerShell, configure the current-user execution policy once (no administrator rights required):
 
 ```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\Install-Qt-5.14.1.ps1 -QtRoot D:\\Qt\\5.14.1\\msvc2017_64
-.\scripts\Build-Vtk-8.2.ps1 -QtRoot D:\\Qt\\5.14.1\\msvc2017_64 -VtkRoot D:\\deps\\VTK-8.2
-.\scripts\Build-Debug.ps1 -QtRoot D:\\Qt\\5.14.1\\msvc2017_64 -VtkRoot D:\\deps\\VTK-8.2
-.\scripts\Run-Debug.ps1 -QtRoot D:\\Qt\\5.14.1\\msvc2017_64 -VtkRoot D:\\deps\\VTK-8.2
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 ```
 
-The first VTK build is expected to take substantial time. Subsequent project
-builds use `build\\Debug-x64` and can be repeated with `Build-Debug.ps1`.
+For a fresh machine, run setup once. It discovers or records the local Qt, VTK, and runtime dependency locations:
+
+```powershell
+cd D:\Project
+.\scripts\setup.ps1
+```
+
+Then build and run with zero arguments:
+
+```powershell
+.\scripts\build.ps1
+.\scripts\run.ps1
+```
+
+The new chain removes the need for E: drive mappings, junctions, manual PATH changes, and repeated dependency path arguments. Build intermediates are stored in `out\build\vs2017-x64-debug`; the deployed executable and runtime files are stored in `out\runtime\Debug`, with logs in `out\runtime\Debug\logs`.
+
+The legacy Visual Studio/qmake path remains available through `Build-Debug.ps1` and `Run-Debug.ps1` when explicit Qt and VTK roots are supplied.
 
 ## Repository contents
 

@@ -69,7 +69,7 @@ namespace Log4Qt
 	    mThreadPrinting(true),
 	    mpPatternFormatter(0)
 	{
-	    setDateFormat(RELATIVE);
+	    setDateFormat(TTCC_RELATIVE);
 	}
 	
 	
@@ -114,14 +114,14 @@ namespace Log4Qt
 	        case ISO8601:
 	        	setDateFormat(QLatin1String("ISO8601"));
 	            break;
-	        case ABSOLUTE:
-	        	setDateFormat(QLatin1String("ABSOLUTE"));
+	        case TTCC_ABSOLUTE:
+	        	setDateFormat(QLatin1String("TTCC_ABSOLUTE"));
 	            break;
-	        case DATE:
+	        case TTCC_DATE_VALUE:
 	        	setDateFormat(QLatin1String("DATE"));
 	            break;
-	        case RELATIVE:
-	        	setDateFormat(QLatin1String("RELATIVE"));
+	        case TTCC_RELATIVE:
+	        	setDateFormat(QLatin1String("TTCC_RELATIVE"));
 	            break;
 	        default:
 	            Q_ASSERT_X(false, "TTCCLayout::setDateFormat", "Unkown DateFormat");

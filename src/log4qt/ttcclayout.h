@@ -32,6 +32,9 @@
 
 #include "log4qt/layout.h"
 #include "qtcommon.h"
+#ifdef DATE
+#undef DATE
+#endif
 
 /******************************************************************************
  * Declarations
@@ -76,7 +79,7 @@ namespace Log4Qt
 	    /*!
 	     * The property holds the date format used by the layout.
 	     *
-	     * The default date format is "RELATIVE".
+	     * The default date format is "TTCC_RELATIVE".
 	     *
 	     * \sa dateFormat(), setDateFormat()
 	     */
@@ -107,20 +110,20 @@ namespace Log4Qt
 	    	 */
 	        ISO8601,
 	    	/*!
-	    	 * The absolute date format string is "ABSOLUTE". The date will be 
+	    	 * The absolute date format string is "TTCC_ABSOLUTE". The date will be 
 	    	 * formatted as HH:mm:ss.zzz.  
 	    	 */
-	        ABSOLUTE,
+	        TTCC_ABSOLUTE,
 	    	/*!
 	    	 * The date date format string is "DATE". The date will be formatted 
 	    	 * as MMM YYYY HH:mm:ss.zzzz.
 	    	 */
-	        DATE,
+	        TTCC_DATE_VALUE,
 	    	/*!
-	    	 * The relative date format string is "RELATIVE". The date will be 
+	    	 * The relative date format string is "TTCC_RELATIVE". The date will be 
 	    	 * formatted as milliseconds since start of the program.
 	    	 */
-	        RELATIVE
+	        TTCC_RELATIVE
 	    };
 	    Q_ENUMS(DateFormat)
 	        
