@@ -126,7 +126,12 @@ is not accepted if it breaks the existing build path.
 Clean-build validation removes only generated output, then rebuilds everything:
 
 ```powershell
-Remove-Item .\out -Recurse -Force
-.\scripts\build.ps1
+.\scripts\build.ps1 -Clean
 .\scripts\run.ps1
 ```
+
+`-Clean` removes the CMake build tree and deployed runtime files. It preserves
+`out\runtime\Debug\workSpace`, logs, local configuration, and dependencies.
+
+The supported workflow invokes CMake directly and works with CMake 3.18 or
+newer. `CMakePresets.json` is optional IDE metadata for CMake 3.20 or newer.

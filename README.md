@@ -47,6 +47,14 @@ Then build and run with zero arguments:
 .\scripts\run.ps1
 ```
 
+To prove that no historical object or CMake cache is required, run a full
+rebuild with `./scripts/build.ps1 -Clean`.
+The clean operation preserves runtime `workSpace` data and logs.
+
+The supported entry point is the PowerShell script above. `CMakePresets.json`
+is optional IDE metadata and requires CMake 3.20 or newer; it is not used by
+the CMake 3.18-compatible script workflow.
+
 The new chain removes the need for E: drive mappings, junctions, manual PATH changes, and repeated dependency path arguments. Build intermediates are stored in `out\build\vs2017-x64-debug`; the deployed executable and runtime files are stored in `out\runtime\Debug`, with logs in `out\runtime\Debug\logs`.
 
 The legacy Visual Studio/qmake path remains available through `Build-Debug.ps1` and `Run-Debug.ps1` when explicit Qt and VTK roots are supplied.
