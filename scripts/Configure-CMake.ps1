@@ -8,6 +8,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+. (Join-Path $PSScriptRoot "Local-Config.ps1")
+Import-Dev701VsEnvironment
 
 & (Join-Path $PSScriptRoot "Check-Environment.ps1") -QtRoot $QtRoot -VtkRoot $VtkRoot
 if ($LASTEXITCODE -ne 0) { throw "Environment check failed." }
