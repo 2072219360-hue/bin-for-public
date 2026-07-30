@@ -17,8 +17,8 @@ through a small adapter during the coexistence period.
 
 | Priority | Component | Reason | Next action |
 | --- | --- | --- | --- |
-| P0 | `argData` | self-contained value object with no Qt/VTK dependency | replace with `GridConversionOptions` |
-| P0 | `postgridsimplify` | small page shell; good test of UI-to-service boundary | create `GridSimplificationPage` adapter |
+| P0 | `argData` | self-contained value object with no Qt/VTK dependency | replacement module delivered; legacy adapter pending |
+| P0 | `postgridsimplify` | small page shell; good test of UI-to-service boundary | controller delivered; Qt/Ribbon adapter pending |
 | P1 | `SceneWidget` file/decimation/clip functions | necessary post-processing capability but heavily coupled | split readers, services, and VTK adapters |
 | P1 | `PostProcessProfiling` controls | overlaps with SceneWidget functionality | retain only unique view tools |
 | P2 | `runData` | contains VTK ownership and topology state | separate domain metadata from VTK representation |

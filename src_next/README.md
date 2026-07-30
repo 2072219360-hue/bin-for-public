@@ -33,7 +33,17 @@ open files, call VTK algorithms, or access global legacy singletons directly.
 
 ## Current status
 
-This initial structure defines stable contracts only. It is intentionally not
-added to the legacy project files. The build-system workstream will add it as a
-separate target; the application workstream will then migrate the selected
-modules without changing the legacy executable entry point.
+The first migrated module is the grid conversion configuration path:
+`GridConversionOptions`, `KeyValueGridConversionOptionsStore`, and
+`GridConversionModule`. It is independent of the legacy `argData` class; a
+legacy adapter is deferred until the application integration phase.
+
+`ModuleRegistry` owns new module instances and starts them in declared order.
+The legacy main window will later need only one composition-root call to
+register the new modules. The `GridSimplificationPageController` demonstrates
+the UI boundary: it accepts a service contract and result data, not a widget,
+file path, VTK object, or legacy singleton.
+
+These sources are deliberately not added to legacy project files. The
+build-system workstream will add them as a separate target before the legacy
+executable is wired to the composition root.
